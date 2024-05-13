@@ -1,0 +1,27 @@
+.footer{
+    height : 100px;
+    background-color: Black;
+    color : white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh; 
+}
+.footer p{
+    font-weight: 550;
+}
+.author {
+    margin-bottom: 5px;
+}
+.f-socials {
+    width : 100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    padding: 5px;
+    list-style-type: none;
+}

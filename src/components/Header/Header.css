@@ -1,0 +1,128 @@
+.app {
+  z-index: 2;
+  display : flex;
+  background-color: transparent;
+  align-items: center;
+  position:fixed;
+  width: 100%;
+  top:0;
+}
+.activeapp{
+  background-color: rgb(72, 137, 242);
+}
+.nav{  
+  height : 60px;
+  background-color: transparent;
+  width : 100%;
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+  padding : 0 15px;
+}
+.logo-container {
+  margin-left : 25px;
+}
+@media screen and (max-width:500px) {
+  .logo-container {
+    margin-left : 10px;
+  } 
+}
+.logo-cont-a img{
+  width : 40px;
+  height : 40px;
+}
+.navigation-items {
+  display : flex;
+  gap : 60px;
+}
+.navigation-items .nav-i-a {
+  color : white;
+  text-decoration : none;
+  font-weight : 500;
+  font-size : 16px;
+  transition : .2s ease-in-out;
+}
+.navigation-items .nav-i-a:hover {
+color :white;
+}
+.hamburger {
+  display : none;
+}
+.ham-bar{
+  display:block;
+  width : 25px;
+  height : 3px;
+  margin : 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;   
+}
+@media screen and (max-width:780px) {
+  .hamburger {
+      display : block;
+  }
+  .hamburger.active .ham-bar:nth-child(2){
+      opacity : 0;
+  }
+  .hamburger.active .ham-bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg) ;
+  }
+  .hamburger.active .ham-bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg) ;
+  }
+  .navigation-items{
+      position: fixed;
+      right : -100%;
+      flex-direction : column;
+      background-color: rgb(72, 137, 242);
+      opacity: 1;
+      top:60px;
+      padding-top: 10vh;
+      width:100%;
+      height:100vh;
+      align-items: center;
+      gap:10vh;
+      transition:0.3s;
+  }
+  .navigation-items.active {
+      right : 0;
+  }
+}
+.mode-change {
+  position : relative;
+  margin-right :10px;
+  margin-left: 30px;
+}
+@media screen and (max-width:780px) {
+  .mode-change{
+    margin-left: 0px;
+  }
+}
+.fa-sun, .fa-moon {
+  color : white;
+}
+.sun, .moon{
+  width: fit-content;
+  height: fit-content;
+}
+.moon{
+  position : absolute;
+  inset:0;
+}
+.moon-logo {
+  opacity : 0;
+  transform : translateY(30%) rotateZ(50deg);
+  transition : all 1s ease-out; 
+}
+.sun-logo {
+  opacity : 1;
+  transform : translateY(0) rotatez(0deg);
+  transition : all 1s ease-out;
+}
+.moon-anim {
+ opacity:1;
+ transform: translateY(0) rotateZ(0deg);
+}
+.sun-anim {
+ opacity : 0;
+ transform : translateY(30%) rotatez(100deg);
+}

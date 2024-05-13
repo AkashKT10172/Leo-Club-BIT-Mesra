@@ -1,0 +1,42 @@
+* {
+    margin:0;
+    padding:0;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+}
+.main video{
+    width : 100%;
+    height : 100%;
+    object-fit : cover;
+    position: fixed;
+    z-index: -1;
+}
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    top:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 100px;
+}
+.content button {
+    animation: jump-shaking 5s infinite;
+}
+@keyframes jump-shaking {
+    0% { transform: translateX(0) }
+    3% { transform: translateY(-5px) }
+    6% { transform: translateY(-5px) rotate(17deg) }
+    9% { transform: translateY(-5px) rotate(-17deg) }
+    12% { transform: translateY(-5px) rotate(17deg) }
+    15% { transform: translateY(-5px) rotate(-17deg) }
+    18% { transform: translateY(0) rotate(0) }
+    70% { transform: translateY(0) rotate(0) }
+    80% { transform: translateY(0) rotate(0) }
+    100% { transform: translateY(0) rotate(0) }   
+}

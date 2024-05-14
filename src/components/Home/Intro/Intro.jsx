@@ -23,11 +23,11 @@ function IntroDiv() {
                 delectus! Nobis error nihil harum, mollitia quo provident eligendi vitae commodi esse iste autem
                 quas.
                 </p>
-                <a href="">
+               
                 <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     <Link to="/about">Click to know more!</Link>
                 </button>
-                </a>
+             
             </div>        
         </div>
     );

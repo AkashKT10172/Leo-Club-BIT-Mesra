@@ -14,8 +14,10 @@ function Navbar() {
   const [navState, setNavState] = useState(false);
   const [navVis, setNavVis] = useState(false);
   const handleNavClick = () => {
+        if(window.innerWidth<=768){
         setNavState(!navState);
         if(window.scrollY <=60) setNavVis(!navVis);
+        }
   }
   let toggleHamClass = navState ? 'active':null;
 
@@ -24,7 +26,6 @@ function Navbar() {
         setModeState(!modeState);
   }
   let toggleModeClass = modeState ? '-anim':null;
-
   
   const changeBg = () => {
     if(window.scrollY >=100){
@@ -36,14 +37,14 @@ function Navbar() {
   window.addEventListener('scroll', changeBg);
 
   return (
-    <div className={(!navVis && (usePathname()==="/")) ? 'app' : 'app activeapp'}>
+    <div className={((usePathname()==="/") && !navVis) ? 'app' : 'app activeapp'}>
       <div className="nav"> 
         <div className = "logo-container">
         <NavLink to="/" className="logo-cont-a"><img src={leoLogo}></img></NavLink>
       </div>
       <div className={`navigation-items ${toggleHamClass}`}>
       <NavLink to="/" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={usePathname !== "/" ? handleNavClick: null}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
           Home
       </NavLink>
       <NavLink to="/events" className={({isActive}) => `block py-2 pr-2 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-white"} 

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Gallery = () => {
+function Gallery() {
   return (
-    <div className='h-screen flex justify-center items-center'>Gallery page coming soon....</div>
+    <div className='h-screen flex justify-center items-center'>Events page coming soon....</div>
   )
 }
 

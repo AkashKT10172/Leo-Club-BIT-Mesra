@@ -1,0 +1,45 @@
+.team-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color:azure;
+    }
+.team-image, .team-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height : 100%;
+    padding: 25px;
+    
+}
+.team-main .team-image img {
+    margin-top: 50px;
+    width : 425px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
+    transition: 0.3s ease;
+}
+.team-main .team-image img:hover {
+    transform: scale(1.05);
+}
+@media screen and (max-width:768px) {
+    .team-image {
+        width: 100%; 
+    }
+    .team-info{
+        width: 100%;
+    }
+    .team-main{
+        flex-direction: column;
+    }
+    .team-main .team-image img {
+        width : 400px;
+        height: 400px;
+    }
+}

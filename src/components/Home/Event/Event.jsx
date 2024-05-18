@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import image from './leoEvent.png'
 import './Event.css'
 
@@ -10,9 +10,7 @@ function Event() {
      <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text ">OUR EVENTS</h1>
     </div>
     <div className ="event-main">
-     <div className="event-image">
-        <img src={image} alt="ok"/>
-    </div> 
+     
     <div className="event-info">
         <h1 className="text-3xl text-gray-700 font-black text-center">ORPHANAGE VISIT</h1>
         <p className="px-10 py-10 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -22,10 +20,12 @@ function Event() {
         delectus!
         </p>
         <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <Link to="/events">See all events!</Link>
+            <NavLink to="/events">See all events!</NavLink>
         </button>
     </div>   
-       
+    <div className="event-image">
+        <img src={image} alt="ok"/>
+    </div> 
     </div>
     </>
   )

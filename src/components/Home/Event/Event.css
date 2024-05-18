@@ -36,7 +36,7 @@
         width: 100%;
     }
     .event-main{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .event-main .event-image img {
         width : 400px;

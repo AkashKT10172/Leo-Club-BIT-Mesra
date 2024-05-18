@@ -1,7 +1,7 @@
 import React from "react";
 import "./Intro.css"
 import leoLogo from "./leoLogo.png"
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function IntroDiv() {
     return(
@@ -25,7 +25,7 @@ function IntroDiv() {
                 </p>
                
                 <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    <Link to="/about">Click to know more!</Link>
+                    <NavLink to="/about">Click to know more!</NavLink>
                 </button>
              
             </div>        

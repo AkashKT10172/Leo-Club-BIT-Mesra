@@ -1,5 +1,5 @@
 .app {
-  z-index: 2;
+  z-index: 12;
   display : flex;
   background-color: transparent;
   align-items: center;
@@ -62,7 +62,7 @@ color :white;
   }
   .hamburger.active .ham-bar:nth-child(2){
       opacity : 0;
-  }
+  } 
   .hamburger.active .ham-bar:nth-child(1){
       transform: translateY(8px) rotate(45deg) ;
   }

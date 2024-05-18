@@ -1,0 +1,13 @@
+.group:hover .bg-gray-800 {
+    opacity: 0.9;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.3s, transform 0.5s;
+  }
+ 
+  .group:hover .econtent{
+    filter: blur(0);
+  }
+  .group:hover .eimg{
+    filter: blur(0);
+  }

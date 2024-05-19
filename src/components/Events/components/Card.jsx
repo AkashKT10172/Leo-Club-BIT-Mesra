@@ -7,7 +7,7 @@ const Card = ({ name, date, type, desc, image }) => {
   const description1=readmore? desc:`${desc.substring(0,280)}...`
   return (
     <>
-      <div className="group bg-gradient-to-r from-blue-200 to-blue-100 flex flex-col justify-center items-center relative h-76 sm:h-80 w-4/5 sm:w-2/3 border-2 shadow-xl sm:flex-row sm:transition-all sm:hover:scale-105 rounded-lg">
+      <div className="group bg-gradient-to-r from-blue-200 to-blue-100 flex flex-col justify-center items-center relative h-76 sm:h-96 w-4/5 sm:w-2/3 border-2 shadow-xl sm:flex-row sm:transition-all sm:hover:scale-105 rounded-lg">
       <div className="absolute top-0 left-0 w-full h-full text-6xl text-blue-500 bg-gray-800 bg-opacity-75 flex items-center justify-center transition-opacity group-hover:opacity-0 z-10">
              {name}
        </div>

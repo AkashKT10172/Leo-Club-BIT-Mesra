@@ -5,7 +5,6 @@ import faculty from './faculty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { NavLink, Link } from "react-router-dom";
-import akash from './akash.jpg'
 const myJuniorMem = juniors.juniorMembers;
 const mySeniorMem = seniors.seniorMembers;
 const myFacultyMem = faculty.facultyMembers;
@@ -17,7 +16,7 @@ const Team = () => {
     <div className='flex flex-wrap justify-center items-center' >
     {myFacultyMem.map((mem)=> 
     <div className='flex flex-col justify-evenly items-center h-96 w-72 px-2 m-3 bg-slate-800 rounded-md md:h-96 md:w-96 ease-in-out duration-200 hover:scale-105 hover:shadow-lg hover:shadow-blue-500'>
-        <img className = "member-image h-56 w-56 rounded-full mt-3" src={akash}/>
+        <img className = "member-image h-56 w-56 rounded-full mt-3" src={mem.image}/>
         <p className='text-yellow-50 mt-2'>{mem.name}</p>
         <p className='text-purple-300 my-1'>{mem.designation}</p>
         <div className="flex flex-col items-center text-slate-500 my-1 list-none cursor-pointer">
@@ -32,7 +31,7 @@ const Team = () => {
     <div className='flex flex-wrap justify-center items-center' >
     {mySeniorMem.map((mem)=> 
     <div className='flex flex-col justify-evenly items-center h-96 w-72 px-2 m-3 bg-slate-800 rounded-md md:h-96 md:w-96 ease-in-out duration-200 hover:scale-105 hover:shadow-lg hover:shadow-blue-500'>
-        <img className = "member-image h-56 w-56 rounded-full mt-3" src={akash}/>
+        <img className = "member-image h-56 w-56 rounded-full mt-3" src={mem.image}/>
         <p className='text-yellow-50 mt-2'>{mem.name}</p>
         <p className='text-purple-300 my-1'>{mem.designation}</p>
         <div className="f-socials text-slate-500 my-1">
@@ -48,7 +47,7 @@ const Team = () => {
     <div className='flex flex-wrap justify-center items-center' >
     {myJuniorMem.map((mem)=> 
     <div className='flex flex-col justify-evenly items-center h-96 w-72 px-2 m-3 bg-slate-800 rounded-md md:h-96 md:w-96 ease-in-out duration-200 hover:scale-105 hover:shadow-lg hover:shadow-blue-500'>
-        <img className = "member-image h-56 w-56 rounded-full mt-3" src={akash}/>
+        <img className = "member-image h-56 w-56 rounded-full mt-3" src={mem.image}/>
         <p className='text-yellow-50 mt-2'>{mem.name}</p>
         <p className='text-purple-300 my-1'>{mem.designation}</p>
         <div className="f-socials text-slate-500 my-1">

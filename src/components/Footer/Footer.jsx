@@ -4,6 +4,7 @@ import {faEnvelope, faPhone, faLocationDot} from '@fortawesome/free-solid-svg-ic
 import { NavLink } from 'react-router-dom'
 import './Footer.css'
 import galleryImg from './galleryImg'
+import leoLogo from './leoLogo.png'
 const galleryImgs = galleryImg.images;
 
 
@@ -14,7 +15,7 @@ function Footer() {
       <div className='flex justify-center items-center md:flex-row flex-col-reverse bg-black text-white py-4 px-4 border-t-2 border-teal-300'>
         <div className='sm:w-2/4 w-full flex justify-center items-center sm:flex-row flex-col'>
             <div className='sm:w-2/4 w-full flex flex-col justify-center items-center '>
-              <img src="src/components/Footer/leoLogo.png" alt="" className='w-60 h-60' />
+              <img src={leoLogo} alt="" className='w-60 h-60' />
               <div className='flex flex-wrap justify-center items-center'>
               <span className="bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 text-transparent bg-clip-text">LEADERSHIP&nbsp;&nbsp;</span>
               <span className="bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 text-transparent bg-clip-text">EXPERIENCE&nbsp;&nbsp;</span>

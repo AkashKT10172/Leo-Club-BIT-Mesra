@@ -31,8 +31,9 @@ function Footer() {
             </div>
         </div>
         <div className='sm:w-2/4 w-full flex flex-wrap justify-center items-center'>
-            <div className='flex flex-wrap justify-center items-center'>{galleryImgs.map((img) =>
-              <img className = "member-image h-44 w-1/3 px-2 mt-3" src={img.image}/>
+            <div className='flex flex-wrap justify-center items-center'>
+              {galleryImgs.map((img) =>
+              <img className = "member-image h-44 w-1/3 px-2 mt-3 hover:scale-110 transition-all" src={img.image}/>
             )}
             </div>
             <NavLink to='/gallery' className='py-2 underline text-teal-400'>See all Images &#8594;</NavLink>

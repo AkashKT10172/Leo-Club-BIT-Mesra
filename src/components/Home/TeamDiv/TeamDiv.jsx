@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './TeamDiv.css'
-
+import profIn from "/src/components/Team/imagesTeam/akash.jpg"
 function TeamDiv() {
   return (
     <>
     <div className ="team-main">
     <div className="team-image">
-        <img src="\src\components\Team\imagesTeam\akash.jpg" alt="ok"/>
+        <img src={profIn} alt="ok"/>
     </div> 
     <div className="team-info">
         <h1 className="text-3xl text-gray-700 font-black text-center">PROFESSOR-IN-CHARGE</h1>

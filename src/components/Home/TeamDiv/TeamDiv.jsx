@@ -7,7 +7,7 @@ function TeamDiv() {
     <>
     <div className ="team-main">
     <div className="team-image">
-        <img src="" alt="ok"/>
+        <img src="\src\components\Team\imagesTeam\akash.jpg" alt="ok"/>
     </div> 
     <div className="team-info">
         <h1 className="text-3xl text-gray-700 font-black text-center">PROFESSOR-IN-CHARGE</h1>

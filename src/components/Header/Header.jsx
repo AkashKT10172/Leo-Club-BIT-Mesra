@@ -17,8 +17,15 @@ function Navbar() {
   const handleNavClick = () => {
         if(window.innerWidth<=768){
         setNavState(!navState);
-        if(window.scrollY <=60) setNavVis(!navVis);
         }
+        if(window.scrollY <=60) setNavVis(!navVis);
+        window.scrollTo(0,0);
+  }
+  const handleNav = () => {
+    if(window.innerWidth<=768){
+      setNavState(!navState);
+      }
+      if(window.scrollY <=60) setNavVis(!navVis);
   }
   let toggleHamClass = navState ? 'active':null;
 
@@ -45,31 +52,31 @@ function Navbar() {
       </div>
       <div className={`navigation-items ${toggleHamClass}`}>
       <NavLink to="/" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick}}`}>
           Home
       </NavLink>
       <NavLink to="/events" className={({isActive}) => `block py-2 pr-2 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
           Events
       </NavLink>
       <NavLink to="/blog" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
           Blog
       </NavLink>
       <NavLink to="/team" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
           Team
       </NavLink>
       <NavLink to="/gallery" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
           Gallery
       </NavLink>
       <NavLink to="/about" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
           About Us
       </NavLink>
       </div>
-      <div className={`hamburger ${toggleHamClass}`} onClick = {handleNavClick}>
+      <div className={`hamburger ${toggleHamClass}`} onClick = {handleNav}>
               <span className="ham-bar"></span>
               <span className="ham-bar"></span>
               <span className="ham-bar"></span>

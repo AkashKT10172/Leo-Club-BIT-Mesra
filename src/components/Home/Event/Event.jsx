@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import image from './leoEvent.png'
 import './Event.css'
+import { handleClick } from '../../onClick'
 
 function Event() {
   return (
@@ -20,7 +21,7 @@ function Event() {
         delectus!
         </p>
         <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <NavLink to="/events">See all events!</NavLink>
+            <NavLink to="/events" onClick={handleClick}>See all events!</NavLink>
         </button>
     </div>   
     <div className="event-image">

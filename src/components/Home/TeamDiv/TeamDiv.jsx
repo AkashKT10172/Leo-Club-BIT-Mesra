@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './TeamDiv.css'
 import profIn from "/src/components/Team/imagesTeam/akash.jpg"
+import { handleClick } from '../../onClick'
 function TeamDiv() {
   return (
     <>
@@ -18,7 +19,7 @@ function TeamDiv() {
         delectus!
         </p>
         <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <NavLink to="/team">Our Team</NavLink>
+            <NavLink to="/team" onClick={handleClick}>Our Team</NavLink>
         </button>
     </div>   
     </div>

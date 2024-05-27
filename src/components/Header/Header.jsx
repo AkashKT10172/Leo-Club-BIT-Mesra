@@ -5,6 +5,7 @@ import leoLogo from './leoLogo.png'
 import {useState} from 'react'
 import { useLocation } from 'react-router-dom';
 import {Link, NavLink} from 'react-router-dom'
+import { handleClick } from '../onClick';
 
 function Navbar() {
   const usePathname = () => {
@@ -44,27 +45,27 @@ function Navbar() {
       </div>
       <div className={`navigation-items ${toggleHamClass}`}>
       <NavLink to="/" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
           Home
       </NavLink>
       <NavLink to="/events" className={({isActive}) => `block py-2 pr-2 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
           Events
       </NavLink>
       <NavLink to="/blog" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
           Blog
       </NavLink>
       <NavLink to="/team" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
           Team
       </NavLink>
       <NavLink to="/gallery" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
           Gallery
       </NavLink>
       <NavLink to="/about" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
-      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
+      lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick} ${handleClick}`}>
           About Us
       </NavLink>
       </div>

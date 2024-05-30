@@ -12,7 +12,7 @@ function Home() {
     <IntroDiv />
     <Event />
     <TeamDiv />
-    <Blog />
+    {/* <Blog /> */}
     </>
   )
 }

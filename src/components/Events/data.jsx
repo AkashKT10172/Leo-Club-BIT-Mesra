@@ -1,4 +1,9 @@
-
+import deepotsav from './assets/Deepotsav.png'
+import Donation_Drive from './assets/Donation_Drive.png'
+import mm from './assets/mm.jpg'
+import Mr_MsPantheon from './assets/Mr_MsPantheon.png'
+import SquidGame from './assets/SquidGame.png'
+import Tvf from './assets/Tvf.png'
 const data=[
     
     {
@@ -7,7 +12,7 @@ const data=[
         date:"14 March 2024",
         type:"Cultural",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elitVoluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernaturvero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optiodelectus",
-        image:"/src/components/Events/assets/Deepotsav.png",
+        image:deepotsav,
     },
     {
         id:3,
@@ -15,7 +20,7 @@ const data=[
         date:"14 March 2024",
         type:"Cultural",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elitVoluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernaturvero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optiodelectus",
-        image:"/src/components/Events/assets/Donation_Drive.png",
+        image:Donation_Drive,
     },
     {
         id:4,
@@ -23,7 +28,7 @@ const data=[
         date:"14 March 2024",
         type:"Cultural",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elitVoluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernaturvero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optiodelectus",
-        image:"/src/components/Events/assets/mm.jpg",
+        image:mm,
     },
     {
         id:5,
@@ -31,7 +36,7 @@ const data=[
         date:"14 March 2024",
         type:"Cultural",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elitVoluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernaturvero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optiodelectus",
-        image:"/src/components/Events/assets/Mr_MsPantheon.png",
+        image:Mr_MsPantheon,
     },
     {
         id:0,
@@ -39,7 +44,7 @@ const data=[
         date:"14 March 2024",
         type:"Cultural",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elitVoluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernaturvero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optiodelectus Lorem ipsum dolor sit amet, consectetur adipisicing elitVoluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernaturvero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,dolor sit amet consectetur adipisicing elit. Explicabo nihil ",
-        image:"/src/components/Events/assets/SquidGame.png",
+        image:SquidGame,
     },
 
     {
@@ -48,7 +53,7 @@ const data=[
         date:"14 March 2024",
         type:"Cultural",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elitVoluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernaturvero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optiodelectus",
-        image:"/src/components/Events/assets/Tvf.png",
+        image:Tvf,
     },
 ]
 export default data;

@@ -6,7 +6,7 @@ import './AboutUs.css'
 const AboutUs = () => {
   return (
     <div className='Acontainer overflow-x-hidden'>
-     <div className='imgdiv flex h-auto max-h-[96vh] justify-center -m-1'>
+     <div className='imgdiv flex h-auto relative max-h-[96vh] justify-center -m-1'>
       <img src={grpImg} className='object-cover bg-fixed z-0'></img>
       <h1 className='text-xl sm:text-4xl absolute top-1/2  text-white font-nova font-semibold z-10'>
          About{' '}

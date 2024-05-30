@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import img1 from './assets/img1.png'
+import img2 from './assets/img2.png'
+import img3 from './assets/img3.png'
+import img4 from './assets/img4.png'
 
-const images=["/src/components/Gallery/assets/img1.JPG","/src/components/Gallery/assets/img2.JPG","/src/components/Gallery/assets/img3.JPG","/src/components/Gallery/assets/img4.JPG","/src/components/Gallery/assets/img2.JPG","/src/components/Gallery/assets/img3.JPG"];
+const images=[img1,img2,img3,img4,img2,img3,img4,img1];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);

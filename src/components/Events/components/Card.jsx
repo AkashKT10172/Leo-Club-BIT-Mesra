@@ -7,19 +7,17 @@ const Card = ({ name, date, type, desc, image }) => {
   const description1=readmore? desc:`${desc.substring(0,280)}...`
   return (
     <>
-      <div className="group bg-gradient-to-r from-blue-200 to-blue-100 flex flex-col justify-center items-center relative h-76 sm:h-auto w-4/5 sm:w-2/3 border-2 shadow-xl sm:flex-row sm:transition-all sm:hover:scale-105 rounded-lg">
-      <div className="absolute top-0 left-0 w-full h-full text-6xl text-blue-500 bg-gray-800 bg-opacity-75 flex items-center justify-center transition-opacity group-hover:opacity-0 z-10 cursor-pointer">
-             {name}
-       </div>
-      <div className="eimg h-2/3 sm:h-full w-full sm:w-1/2 rounded-lg blur-sm">
-        <img src={image} alt={name} className="aspect-square sm:aspect-auto h-full w-full p-2" />
+      <div className="h-1/3 w-1/4 min-w-[400px] border-2 flex  flex-col justify-center  items-center bg-[#fff9f2] hover:scale-105 shadow-md hover:shadow-lg hover:shadow-orange-100 transition-all rounded-md ">
+      <div className='h-1/2 w-1/2 p-2 place-content-center'>
+      <img src={image} alt={name} className="object-fill" />
       </div>
-      <div className="econtent flex flex-col font-serif justify-center items-center card-content h-1/2 w-full sm:w-1/2 sm:h-full p-4 overflow-auto no-scrollbar blur-sm">
-        <h2 className="text-3xl font-bold">{name}</h2>
+       
+      <div className="mt-4 font-nova flex flex-col justify-center items-center text-blue-900 text-l">
+        <h2 className="text-3xl font-bold font-nova text-blue-900">{name}</h2>
         <small>{date} | {type}</small>
-        <p>{description1}
+        <p className='p-2'>{description1}
           <span
-            className="text-blue-900 cursor-pointer"
+            className="text-blackcursor-pointer hover:cursor-pointer text-black"
             onClick={() => {
               setReadmore(!readmore);
             }}

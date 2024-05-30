@@ -5,9 +5,9 @@ import grpImg from '/src/components/AboutUs/img3.png'
 import './AboutUs.css'
 const AboutUs = () => {
   return (
-    <div className='Acontainer overflow-x-hidden '>
-     <div className='flex h-auto max-h-[96vh] relative justify-center -m-1'>
-      <img src={grpImg} className='object-cover'></img>
+    <div className='Acontainer overflow-x-hidden'>
+     <div className='imgdiv flex h-auto max-h-[96vh] justify-center -m-1'>
+      <img src={grpImg} className='object-cover bg-fixed z-0'></img>
       <h1 className='text-xl sm:text-4xl absolute top-1/2  text-white font-nova font-semibold z-10'>
          About{' '}
         <span className='font-bold font-serif ' > <Typewriter

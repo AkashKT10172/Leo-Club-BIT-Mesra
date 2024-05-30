@@ -3,12 +3,12 @@ import {motion} from 'framer-motion'
 
 function FramerAnimation() {
   return (
-    <motion.p className='font-serif text-blue-900 text-[32px] tracking-wider flex justify-center items-center'
+    <motion.p className='font-serif text-blue-900 text-[32px] text-center tracking-wider'
     initial={{x:0}}
-    animate={{x:[1000,0,]}}
+    animate={{x:['120vw','2vw']}}
     transition={{
-        duration:"3",
-        delay:"1",
+        duration:"4",
+        delay:"0.5",
     }}
     
     >

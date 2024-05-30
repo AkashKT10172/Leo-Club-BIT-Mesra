@@ -1,12 +1,13 @@
 import React from 'react'
 import {Typewriter} from 'react-simple-typewriter'
 import FramerAnimation from './FramerAnimation'
+import grpImg from '/src/components/AboutUs/img3.png'
 import './AboutUs.css'
 const AboutUs = () => {
   return (
     <div className='Acontainer overflow-x-hidden '>
      <div className='flex h-auto max-h-[96vh] relative justify-center -m-1'>
-      <img src='/src/components/Gallery/assets/img3.JPG' className='object-cover'></img>
+      <img src={grpImg} className='object-cover'></img>
       <h1 className='text-xl sm:text-4xl absolute top-1/2  text-white font-nova font-semibold z-10'>
          About{' '}
         <span className='font-bold font-serif ' > <Typewriter

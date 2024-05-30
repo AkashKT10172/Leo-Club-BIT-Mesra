@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        nova:['Ibarra Real Nova'],
+      },
+    },
       screens:{
         'sm': '576px',
 
@@ -13,6 +18,7 @@ export default {
 
         'lg': '1020px',
       }
+     
     },
   plugins: [],
 }

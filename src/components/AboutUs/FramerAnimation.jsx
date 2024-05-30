@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 
 function FramerAnimation() {
   return (
-    <motion.p className='font-serif text-blue-900 text-[32px] tracking-wider'
+    <motion.p className='font-serif text-blue-900 text-[32px] tracking-wider flex justify-center items-center'
     initial={{x:0}}
     animate={{x:[1000,0,]}}
     transition={{

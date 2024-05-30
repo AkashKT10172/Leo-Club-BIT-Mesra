@@ -25,7 +25,7 @@ const AboutUs = () => {
      
       
        <div className="Acontent m-auto z-10">
-      <span className='font-nova text-[20px] text-blue-900 font-bold'>WHO WE ARE</span>
+      <span className='font-nova text-[20px] text-blue-900 font-bold flex justify-center'>WHO WE ARE</span>
       <p className='font-nova text-[18px] text-blue-900 ml-6' >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod magna at laoreet rutrum. Donec sed odio dui. Fusce dapibus, tellus quis lacinia congue, erat lorem pulvinar nunc, condimentum feugiat nisl purus pretium nulla.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod magna at laoreet rutrum. Donec sed odio dui. Fusce dapibus, tellus quis lacinia congue, erat lorem pulvinar nunc, condimentum feugiat nisl purus pretium nulla.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod magna at laoreet rutrum. Donec sed odio dui. Fusce dapibus, tellus quis lacinia congue, erat lorem pulvinar nunc, condimentum feugiat nisl purus pretium nulla.
@@ -39,7 +39,7 @@ const AboutUs = () => {
       <FramerAnimation></FramerAnimation>
     </div>
     <div className='Acontent m-auto'>
-    <span className='font-nova text-[20px] text-blue-900 font-bold'>WHAT WE DO</span>
+    <span className='font-nova text-[20px] text-blue-900 font-bold flex justify-center'>WHAT WE DO</span>
       <p className='font-nova text-[18px] text-blue-900 ml-6' >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod magna at laoreet rutrum. Donec sed odio dui. Fusce dapibus, tellus quis lacinia congue, erat lorem pulvinar nunc, condimentum feugiat nisl purus pretium nulla.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod magna at laoreet rutrum. Donec sed odio dui. Fusce dapibus, tellus quis lacinia congue, erat lorem pulvinar nunc, condimentum feugiat nisl purus pretium nulla.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod magna at laoreet rutrum. Donec sed odio dui. Fusce dapibus, tellus quis lacinia congue, erat lorem pulvinar nunc, condimentum feugiat nisl purus pretium nulla.

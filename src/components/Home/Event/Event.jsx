@@ -7,12 +7,12 @@ import { handleClick } from '../../onClick'
 function Event() {
   return (
     <>
-    <div className='heading flex justify-center items-center'>
+    <div className='mx-1 my-1'>
+    <div className='heading flex justify-center items-center rounded-t-2xl'>
      <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text ">OUR EVENTS</h1>
     </div>
-    <div className ="event-main">
-     
-    <div className="event-info">
+    <div className ="event-main rounded-b-2xl">
+    <div className="event-info  ">
         <h1 className="text-3xl text-gray-700 font-black text-center">ORPHANAGE VISIT</h1>
         <p className="px-10 py-10 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Voluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernatur
@@ -27,6 +27,7 @@ function Event() {
     <div className="event-image">
         <img src={image} alt="ok"/>
     </div> 
+    </div>
     </div>
     </>
   )

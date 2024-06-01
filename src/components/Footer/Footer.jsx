@@ -12,8 +12,8 @@ import { handleClick } from '../onClick'
 function Footer() {
   return (
     <>
-      <footer className='min-h-full bg-black'>
-      <div className='flex justify-center items-center md:flex-row flex-col-reverse bg-black text-white py-4 px-4 border-t-2 border-teal-300'>
+      <footer className='min-h-ful mx-1 my-1'>
+      <div className='flex justify-center  rounded-t-2xl items-center md:flex-row flex-col-reverse bg-black text-white py-4 px-4 border-t-2 border-teal-300'>
         <div className='sm:w-2/4 w-full flex justify-center items-center sm:flex-row flex-col'>
             <div className='sm:w-2/4 w-full flex flex-col justify-center items-center '>
               <img src={leoLogo} alt="" className='w-60 h-60' />
@@ -55,7 +55,7 @@ function Footer() {
               <p>+91-6969696969</p>
             </div>
         </div>
-        <div className='sm:w-1/3 w-full flex sm:justify-center justify-start items-center'>
+        <div className='sm:w-1/3 w-full flex sm:justify-center justify-start items-center '>
         <li className='list-none px-1'><FontAwesomeIcon icon={faEnvelope} size="xl"/></li>
         <div className='mx-1'>
               <p className='underline text-teal-400'>Mail Us</p>
@@ -63,7 +63,7 @@ function Footer() {
             </div>
         </div>
       </div>
-      <div className='bg-black h-auto flex flex-col  px-5 py-5 sm:flex-row border-t-2 border-teal-300'>
+      <div className='bg-black h-auto flex flex-col  px-5 py-5 sm:flex-row border-t-2 border-teal-300 rounded-b-2xl'>
         <p className='text-white sm:w-2/4 flex justify-center items-center sm:justify-start'>2024 © Leo Club BIT Mesra</p>
         <div className='flex sm:w-2/4 justify-evenly my-1'>
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-teal-400 transition-all'><a target='_blank' 

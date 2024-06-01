@@ -29,7 +29,7 @@ const Team = () => {
     }
     </div>
     </div>
-    <div className='m-1 rounded-2xl bg-orange-300 mb-2'>
+    <div>
     <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text my-4 p-1 text-center">SENIOR EXECUTIVE BODY</h1>
     <div className='flex flex-wrap justify-center items-center' >
     {mySeniorMem.map((mem)=> 

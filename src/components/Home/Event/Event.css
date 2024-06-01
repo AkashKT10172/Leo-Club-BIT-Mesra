@@ -1,3 +1,6 @@
+.event-main-div {
+    background-color: azure;
+}
 .event-main{
     display: flex;
     justify-content: center;

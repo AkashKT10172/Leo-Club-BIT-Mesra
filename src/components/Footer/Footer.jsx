@@ -13,7 +13,7 @@ function Footer() {
   return (
     <>
       <footer className='min-h-ful event-main-div px-1 py-1'>
-      <div className='flex justify-center  rounded-t-2xl items-center md:flex-row flex-col-reverse bg-black text-white py-4 px-4 border-t-2 border-teal-300'>
+      <div className='flex justify-center  rounded-t-2xl items-center md:flex-row flex-col-reverse bg-black text-white py-4 px-4 border-teal-300'>
         <div className='sm:w-2/4 w-full flex justify-center items-center sm:flex-row flex-col'>
             <div className='sm:w-2/4 w-full flex flex-col justify-center items-center '>
               <img src={leoLogo} alt="" className='w-60 h-60' />

@@ -10,7 +10,7 @@ function President() {
     <>
     <div className='presi-main-div px-1 py-1'>
     <div className='heading flex justify-center items-center rounded-t-2xl'>
-     <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text ">PRESIDENT'S WORD</h1>
+     <h1 className="text-4xl text-center font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text flex flex-wrap">PRESIDENT'S WORD</h1>
     </div>
     <div className ="presi-main rounded-b-2xl">
     <div className="presi-info">
@@ -21,7 +21,7 @@ function President() {
         delectus!
         </p>
         <h2 className='font-semibold'>~SHASHWAT JHA</h2>
-        <h2 className='font-medium'>President, LEO Club BIT Mesra, 2024</h2>
+        <h2 className='font-medium text-center'>President, LEO Club BIT Mesra, 2024</h2>
         <div className='flex sm:w-2/4 justify-evenly my-4 text-black'>
         <li className= 'text-black list-none px-1 hover:scale-125 hover:text-teal-400 transition-all'><a target='_blank' 
         href={`https://www.twitter.com/`}><FontAwesomeIcon icon={faTwitter} size="xl"/></a></li>

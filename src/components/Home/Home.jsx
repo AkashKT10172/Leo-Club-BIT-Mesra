@@ -5,6 +5,7 @@ import Event from './Event/Event.jsx'
 import TeamDiv from './TeamDiv/TeamDiv.jsx'
 import Blog from './Blog/Blog.jsx'
 import President from './President/President.jsx'
+import Contact from './ContactUs/Contact.jsx'
 function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ function Home() {
     <TeamDiv />
     {/* <Blog /> */}
     <President />
+    <Contact />
     </>
   )
 }

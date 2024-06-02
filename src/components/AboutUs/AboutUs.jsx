@@ -18,7 +18,6 @@ const AboutUs = () => {
         trigger:motto.current,
         scroller:"body",
         start:"top 70%",
-        markers:true
       },
       ease:"none"
     })  

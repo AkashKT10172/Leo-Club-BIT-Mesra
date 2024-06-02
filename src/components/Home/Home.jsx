@@ -4,7 +4,7 @@ import IntroDiv from './Intro/Intro.jsx'
 import Event from './Event/Event.jsx'
 import TeamDiv from './TeamDiv/TeamDiv.jsx'
 import Blog from './Blog/Blog.jsx'
-
+import President from './President/President.jsx'
 function Home() {
   return (
     <>
@@ -13,6 +13,7 @@ function Home() {
     <Event />
     <TeamDiv />
     {/* <Blog /> */}
+    <President />
     </>
   )
 }

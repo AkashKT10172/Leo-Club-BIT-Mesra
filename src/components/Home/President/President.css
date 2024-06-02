@@ -1,0 +1,53 @@
+.presi-main-div {
+    background-color: azure;
+}
+.presi-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    background-color:rgb(255, 228, 196);
+    }
+.presi-image, .presi-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height : 100%;
+    padding: 25px;
+    
+}
+.presi-main .presi-image img {
+    margin-top: 50px;
+    width : 425px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
+    transition: 0.3s ease;
+}
+.presi-main .presi-image img:hover {
+    transform: scale(1.05);
+}
+@media screen and (max-width:768px) {
+    .presi-image {
+        width: 100%; 
+    }
+    .presi-info{
+        width: 100%;
+    }
+    .presi-main{
+        flex-direction: column-reverse;
+    }
+    .presi-main .presi-image img {
+        width : 400px;
+        height: 400px;
+    }
+}
+.heading {
+    background-color: rgb(255, 228, 196);
+    height: 100px;
+    padding-top: 60px;
+}

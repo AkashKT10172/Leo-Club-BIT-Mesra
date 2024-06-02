@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './TeamDiv.css'
-import profIn from "/src/components/Team/imagesTeam/akash.jpg"
+import profIn from "/src/components/Home/TeamDiv/amit_sir.jpeg"
 import { handleClick } from '../../onClick'
 function TeamDiv() {
   return (

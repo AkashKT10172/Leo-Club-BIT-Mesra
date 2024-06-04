@@ -58,8 +58,6 @@ const AboutUs = () => {
       <div ref={motto}  className='w-full place-content-center'>
            WORKING FOR A CAUSE ALWAYS
       </div>
-      
-       
     </div>
     <div className='Acontent m-auto'>
     <span className='font-nova text-[20px] text-blue-900 font-bold flex justify-center'>WHAT WE DO</span>

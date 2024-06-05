@@ -1,2 +1,2 @@
 Made using React + Vite.
-Currently in the developmental Process.
+Currently in the developmental Phase.

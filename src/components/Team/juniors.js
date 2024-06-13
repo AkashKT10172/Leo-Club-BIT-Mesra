@@ -1,4 +1,5 @@
 import akash from "/src/components/Team/imagesTeam/akash.jpg"
+import akash_ori from '/src/components/Team/imagesTeam/Akash_ori.jpg'
 import divya from "/src/components/Team/imagesTeam/Divya.png"
 import khushi from "/src/components/Team/imagesTeam/Khushi.jpeg"
 import rajjoo from "/src/components/Team/imagesTeam/Rajjooo_bhai.jpg"
@@ -54,7 +55,7 @@ export default {
             linkedin : "divya-priyadarshini",
             twitter : ""
         },
-        {   image : akash,
+        {   image : akash_ori,
             name : "Akash Kumar Tiwary",
             designation : "Webmaster",
             instagram : "akashdidwhat",

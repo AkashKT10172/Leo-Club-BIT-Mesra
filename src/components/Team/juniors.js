@@ -1,4 +1,4 @@
-import akash from "/src/components/Team/imagesTeam/Akash.jpg"
+import akash from "/src/components/Team/imagesTeam/akash.jpg"
 import divya from "/src/components/Team/imagesTeam/Divya.png"
 import khushi from "/src/components/Team/imagesTeam/Khushi.jpeg"
 import rajjoo from "/src/components/Team/imagesTeam/Rajjooo_bhai.jpg"

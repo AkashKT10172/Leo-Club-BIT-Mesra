@@ -3,6 +3,11 @@ import akash_ori from '/src/components/Team/imagesTeam/Akash_ori.jpg'
 import divya from "/src/components/Team/imagesTeam/Divya.png"
 import khushi from "/src/components/Team/imagesTeam/Khushi.jpeg"
 import rajjoo from "/src/components/Team/imagesTeam/Rajjooo_bhai.jpg"
+import adarsh from "/src/components/Team/imagesTeam/Adarsh.jpg"
+import sanchay from "/src/components/Team/imagesTeam/Sanchay.jpg"
+import shreya from "/src/components/Team/imagesTeam/Shreya.jpg"
+import anjan from "/src/components/Team/imagesTeam/Anjan.jpg"
+
 
 export default {
     juniorMembers: [
@@ -20,11 +25,11 @@ export default {
             linkedin : "khushi-sharma-267108269",
             twitter : ""
         },
-        {   image : akash,
-            name : "Adarsh ",
+        {   image : adarsh,
+            name : "Adarsh Raj",
             designation : "Joint Secretary",
-            instagram : "akashdidwhat",
-            linkedin : "null",
+            instagram : "adarsh_raj18",
+            linkedin : "adarsh-raj-70559725b",
             twitter : ""
         },
         {  image : akash,
@@ -55,6 +60,13 @@ export default {
             linkedin : "divya-priyadarshini",
             twitter : ""
         },
+        {   image : anjan,
+            name : "Anjan Kumar Rajak",
+            designation : "Events Head",
+            instagram : "anjannnnn___",
+            linkedin : "anjan-kumar-rajak-babb7b268",
+            twitter : ""
+        },
         {   image : akash_ori,
             name : "Akash Kumar Tiwary",
             designation : "Webmaster",
@@ -62,18 +74,18 @@ export default {
             linkedin : "akashkt10172",
             twitter : "tweetsbyakash"
         },
-        {   image : akash,
-            name : "Akash Kumar Tiwary",
-            designation : "Webmaster",
-            instagram : "akashdidwhat",
-            linkedin : "null",
+        {   image : sanchay,
+            name : "Sanchay Gupta",
+            designation : "Resource lead",
+            instagram : "",
+            linkedin : "sanchay-gupta-49b543264",
             twitter : ""
         },
-        {   image :akash,
-            name : "Akash Kumar Tiwary",
-            designation : "Webmaster",
-            instagram : "akashdidwhat",
-            linkedin : "null",
+        {   image :shreya,
+            name : "Shreya Singh",
+            designation : "Executive member",
+            instagram : "_shreyasingh04",
+            linkedin : "shreya-singh-b34ba0297",
             twitter : ""
         }
     ]

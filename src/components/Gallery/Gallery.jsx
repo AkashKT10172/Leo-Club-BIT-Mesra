@@ -4,7 +4,7 @@ import img2 from './assets/img2.png'
 import img3 from './assets/img3.png'
 import img4 from './assets/img4.png'
 
-const images=[img1,img2,img3,img4,img2,img3,img4,img1];
+const images=[img1,img2,img3,img4,img2,img3,img4,img1, img2];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -25,6 +25,7 @@ const Gallery = () => {
           <div key={index} className="card group h-58 w-full sm:h-64 sm:w-5/12 md:h-80 md:w-1/4">
             <img
               src={image}
+              loading='lazy'
               alt={`Image ${index + 1}`}
               className="card-image object-cover  h-full w-full shadow-xl rounded-lg  hover:scale-105 hover:opacity-80 cursor-pointer transition-transform  duration-300"
               onClick={() => handleImageClick(image)}

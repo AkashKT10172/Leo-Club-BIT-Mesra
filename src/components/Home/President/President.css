@@ -46,8 +46,8 @@
         height: 400px;
     }
 }
-.heading {
-    background-color: rgb(255, 228, 196);
-    height: 100px;
-    padding-top: 60px;
+.headingPresident {
+    background-color:rgb(255, 228, 196);
+    height: 75px;
+    padding-top: 30px;
 }

@@ -6,7 +6,9 @@ const Root = () => {
   return (
     <>
     <Navbar />
+    <Suspense fallback={<p>This is Loading...</p>}>
     <Outlet />
+    </Suspense>
     <Suspense fallback={<p>This is Loading...</p>}>
       <Footer />
     </Suspense>

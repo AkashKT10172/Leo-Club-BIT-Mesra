@@ -29,7 +29,7 @@ const Contact = () => {
       
   };
   return (
-    <div className='h-auto w-full flex flex-col items-center'>
+    <div className='h-auto w-full flex flex-col items-center bg-[azure]'>
       <h1 className='text-center font-bold text-2xl sm:text-4xl text-wrap pt-14 underline'>Connect with us for Collaborations/Donations!</h1>
       <form ref={myForm} onSubmit={sendEmail} className='w-3/4 pt-4 flex flex-col justify-center items-center'>
       <div className='flex md:flex-row flex-col w-full h-auto'>

@@ -8,7 +8,7 @@ function Event() {
   return (
     <>
     <div className='event-main-div px-1 py-1'>
-    <div className='heading flex justify-center items-center rounded-t-2xl'>
+    <div className='headingEvent flex justify-center items-center rounded-t-2xl'>
      <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text ">OUR EVENTS</h1>
     </div>
     <div className ="event-main rounded-b-2xl">

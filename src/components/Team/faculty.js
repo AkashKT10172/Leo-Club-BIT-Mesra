@@ -1,17 +1,19 @@
-import akash from "/src/components/Team/imagesTeam/akash.jpg"
+import dosa from "/src/components/Team/imagesTeam/dosa.png"
+import facad from "/src/components/Team/imagesTeam/amit_sir.jpeg"
+
 export default {
     facultyMembers: [
-        {   image : akash,
-            name : "Akash Kumar Tiwary",
-            designation : "Professor-In-Charge",
+        {   image : dosa,
+            name : "Dr. Bhaskar Karn",
+            designation : "Dean (Student's Affairs)",
             mail : "dosa@bitmesra.ac.in",
-            mobile : "+99999999999"
+            mobile : "+91-9431382601"
         },
-        {   image : akash,
-            name : "Akash Kumar Tiwary",
+        {   image : facad,
+            name : "Dr. Amit Saran",
             designation : "Professor-In-Charge",
-            mail : "dosa@bitmesra.ac.in",
-            mobile : "+99999999999"
+            mail : "amitsaran@bitmesra.ac.in",
+            mobile : "+91-9431039700"
         },
     ]
 };

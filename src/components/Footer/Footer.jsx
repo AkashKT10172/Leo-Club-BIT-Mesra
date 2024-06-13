@@ -52,14 +52,14 @@ function Footer() {
         <li className='list-none px-1'><FontAwesomeIcon icon={faPhone} size="xl"/></li>
         <div className='mx-1'>
               <p className='underline text-teal-400'>Call Us</p>
-              <p>+91-6969696969</p>
+              <p>+91-7016122704</p>
             </div>
         </div>
         <div className='sm:w-1/3 w-full flex sm:justify-center justify-start items-center '>
         <li className='list-none px-1'><FontAwesomeIcon icon={faEnvelope} size="xl"/></li>
         <div className='mx-1'>
               <p className='underline text-teal-400'>Mail Us</p>
-              <p>leobitmesra@gmail.com</p>
+              <p>leoclub@bitmesra.ac.in</p>
             </div>
         </div>
       </div>
@@ -69,11 +69,11 @@ function Footer() {
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-teal-400 transition-all'><a target='_blank' 
         href={`https://www.twitter.com/`}><FontAwesomeIcon icon={faTwitter} size="xl"/></a></li>
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-teal-400 transition-all'><a target='_blank' 
-        href={`https://www.twitter.com/`}><FontAwesomeIcon icon={faFacebook} size="xl"/></a></li>
+        href={`https://www.facebook.com/LeoBITMesra`}><FontAwesomeIcon icon={faFacebook} size="xl"/></a></li>
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-teal-400 transition-all'><a target='_blank' 
-        href={`https://www.twitter.com/`}><FontAwesomeIcon icon={faInstagram} size="xl"/></a></li>
+        href={`https://www.instagram.com/leoclub_bitmesra/`}><FontAwesomeIcon icon={faInstagram} size="xl"/></a></li>
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-teal-400 transition-all'><a target='_blank' 
-        href={`https://www.twitter.com/`}><FontAwesomeIcon icon={faLinkedin} size="xl"/></a></li>
+        href={`https://www.linkedin.com/company/leo-club-bit-mesra/`}><FontAwesomeIcon icon={faLinkedin} size="xl"/></a></li>
         </div>
       </div>
       </footer>

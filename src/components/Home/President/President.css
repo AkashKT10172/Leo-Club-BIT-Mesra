@@ -43,6 +43,9 @@
         width : 400px;
         height: 400px;
     }
+    .presi-main .presi-image img:hover {
+        transform: scale(1);
+    }
 }
 .headingPresident {
     height: 75px;

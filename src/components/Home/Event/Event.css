@@ -16,7 +16,6 @@
     width: 50%;
     height : 100%;
     padding: 25px;
-    
 }
 .event-main .event-image img {
     margin-top: 50px;
@@ -42,6 +41,9 @@
     .event-main .event-image img {
         width : 400px;
         height: 400px;
+    }
+    .event-main .event-image img:hover {
+        transform: scale(1);
     }
 }
 .headingEvent {

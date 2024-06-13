@@ -42,4 +42,7 @@
         width : 400px;
         height: 400px;
     }
+    .team-main .team-image img:hover {
+        transform: scale(1);
+    }
 }

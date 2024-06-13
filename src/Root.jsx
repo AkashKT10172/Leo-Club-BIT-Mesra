@@ -6,10 +6,10 @@ const Root = () => {
   return (
     <>
     <Navbar />
-    <Suspense fallback={<p>This is Loading...</p>}>
+    <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
     <Outlet />
     </Suspense>
-    <Suspense fallback={<p>This is Loading...</p>}>
+    <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
       <Footer />
     </Suspense>
     </>

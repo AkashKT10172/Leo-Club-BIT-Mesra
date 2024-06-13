@@ -5,9 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 100px);
     width: 100%;
-    background-color:rgb(255, 228, 196);
     }
 .presi-image, .presi-info {
     display: flex;
@@ -47,7 +45,6 @@
     }
 }
 .headingPresident {
-    background-color:rgb(255, 228, 196);
     height: 75px;
     padding-top: 60px;
 }

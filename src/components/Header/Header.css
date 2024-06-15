@@ -20,15 +20,14 @@
   padding : 0 15px;
 }
 .logo-container {
-  margin-left : 10px;
   display: flex;
 }
 .logo-container img {
   margin-left : 10px;
 }
 @media screen and (max-width:500px) {
-  .logo-container {
-    margin-left : 2.5px;
+  .logo-container img {
+    margin-left : 5px;
   } 
 }
 .logo-cont-a img{

@@ -5,7 +5,7 @@ import leoLogo from './leoLogo.png'
 import {useState} from 'react'
 import { useLocation } from 'react-router-dom';
 import {Link, NavLink} from 'react-router-dom'
-import { handleClick } from '../onClick';
+import bitLogo from './bitLogo.png'
 
 function Navbar() {
   const usePathname = () => {
@@ -49,6 +49,7 @@ function Navbar() {
       <div className="nav"> 
         <div className = "logo-container">
         <NavLink to="/" className="logo-cont-a"><img src={leoLogo}></img></NavLink>
+        <NavLink to="/" className="logo-cont-a"><img src={bitLogo}></img></NavLink>
       </div>
       <div className={`navigation-items ${toggleHamClass}`}>
       <NavLink to="/" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 

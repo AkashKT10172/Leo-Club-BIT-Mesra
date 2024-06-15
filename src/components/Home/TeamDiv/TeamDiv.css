@@ -4,7 +4,7 @@
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background-color:azure;
+    background-color:white;
     }
 .team-image, .team-info {
     display: flex;
@@ -21,7 +21,8 @@
     margin-top: 50px;
     width : 425px;
     height: 500px;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
     transition: 0.3s ease;
 }

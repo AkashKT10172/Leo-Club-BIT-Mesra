@@ -1,5 +1,5 @@
 .event-main-div {
-    background-color: azure;
+    background-color: white;
 }
 .event-main{
     display: flex;
@@ -17,12 +17,17 @@
     height : 100%;
     padding: 25px;
 }
+.boxDivEvent {
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); 
+        background : #fff9f2;
+        border : none;
+}
 .event-main .event-image img {
     margin-top: 50px;
     width : 425px;
     height: 500px;
     border-radius: 5px;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
+    border : 1px solid gray;
     transition: 0.3s ease;
 }
 .event-main .event-image img:hover {

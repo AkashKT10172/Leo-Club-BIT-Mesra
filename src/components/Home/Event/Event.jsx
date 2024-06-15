@@ -7,8 +7,8 @@ import { handleClick } from '../../onClick'
 function Event() {
   return (
     <>
-    <div className='event-main-div px-2 py-2'>
-    <div className='border-2 border-gray-600 rounded-3xl pb-5'>
+    <div className='event-main-div  sm:px-4 sm:py-8 py-2 px-2'>
+    <div className='border-2 border-gray-600 rounded-md pb-5 boxDivEvent'>
           <div className='headingEvent flex  justify-center items-center rounded-t-2xl '>
             <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text ">OUR EVENTS</h1>
           </div>

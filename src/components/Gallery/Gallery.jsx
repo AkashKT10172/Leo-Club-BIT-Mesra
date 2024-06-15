@@ -27,7 +27,7 @@ const Gallery = () => {
               src={image}
               loading='lazy'
               alt={`Image ${index + 1}`}
-              className="card-image object-cover  h-full w-full shadow-xl rounded-md  sm:hover:scale-105 sm:hover:opacity-80 cursor-pointer transition-transform  duration-300"
+              className="card-image object-cover  h-full w-full shadow-xl rounded-sm  sm:hover:scale-105 sm:hover:opacity-80 cursor-pointer transition-transform  duration-300"
               onClick={() => handleImageClick(image)}
             />
           </div>

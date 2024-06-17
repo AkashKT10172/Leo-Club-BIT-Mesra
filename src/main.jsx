@@ -7,7 +7,10 @@ import Home from './components/Home/Home.jsx'
 import AboutUs from './components/AboutUs/AboutUs.jsx'
 import Team from './components/Team/Team.jsx'
 import Events from './components/Events/Events.jsx'
-import Blog from './components/Blog/Blog.jsx'
+import Login from './components/Blog/Pages/Login.jsx'
+import BlogHome from './components/Blog/Pages/BlogHome.jsx'
+import CreateBlog from './components/Blog/Pages/CreateBlog.jsx'
+
 const Gallery = lazy(() => import('./components/Gallery/Gallery.jsx' ));
 
 
@@ -34,7 +37,18 @@ const router = createBrowserRouter(
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <Gallery />
           </Suspense>} />
-        <Route path="blog" element={<Blog />} />
+          <Route path="blog" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <BlogHome />
+          </Suspense>} />
+          <Route path="blog/login" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <Login />
+          </Suspense>} />
+          <Route path="blog/createblog" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <CreateBlog />
+          </Suspense>} />
       </Route>
   )
 )

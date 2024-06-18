@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
-import img1 from './assets/img1.jpg'
-import img2 from './assets/img2.jpg'
-import img3 from './assets/img3.jpg'
-import img4 from './assets/img4.jpg'
-
-const images=[img1,img2,img3,img4,img2,img3,img4,img1, img2];
+import mm1 from './assets/mm1.jpg';
+import mm2 from './assets/mm2.jpg';
+import mm3 from './assets/mm3.jpg';
+import mm4 from './assets/mm4.jpg';
+import mm5 from './assets/mm5.jpg';
+import mm6 from './assets/mm6.jpg';
+import mm7 from './assets/mm7.jpg';
+import dd1 from './assets/dd1.jpg';
+import dd2 from './assets/dd2.jpg';
+import dd3 from './assets/dd3.jpg';
+import dd4 from './assets/dd4.jpg';
+import dd5 from './assets/dd5.jpg';
+import dd6 from './assets/dd6.jpg';
+import dd7 from './assets/dd7.jpg';
+import dd8 from './assets/dd8.jpg';
+import dd9 from './assets/dd9.jpg';
+import dd10 from './assets/dd10.jpg';
+import dd11 from './assets/dd11.jpg';
+import dd12 from './assets/dd12.jpg';
+const images=[dd1,dd2,dd3,dd4,dd5,dd6,dd7,dd8,dd9,dd10,dd11,dd12,mm1,mm2,mm3,mm4,mm5,mm6,mm7];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);

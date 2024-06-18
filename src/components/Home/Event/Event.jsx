@@ -10,6 +10,9 @@ function Event() {
     <div className='event-main-div  sm:px-4 sm:py-8 py-2 px-2 gevent overflow-x-hidden'>
     <div className='border-2 border-gray-600 rounded-md pb-5 boxDivEvent overflow-x-hidden'>
           <div className='headingEvent flex  justify-center items-center rounded-t-2xl gevent-heading'>
+    <div className='event-main-div  sm:px-4 sm:py-8 py-2 px-2'>
+    <div className='border-2 border-gray-600 rounded-md pb-5 boxDivEvent shadow-lg shadow-blue-400'>
+          <div className='headingEvent flex  justify-center items-center rounded-t-2xl '>
             <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text ">OUR EVENTS</h1>
           </div>
           <div className ="event-main rounded-b-2xl">

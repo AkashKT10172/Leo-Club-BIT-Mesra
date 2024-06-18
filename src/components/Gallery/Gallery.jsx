@@ -19,7 +19,7 @@ const Gallery = () => {
 
   return (
     <div className="h-full w-full flex flex-col justify-center items-center mb-6 mt-16">
-      <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text my-4 p-1 text-center">Image Gallery</h1>
+      <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text my-4 p-1 text-center">IMAGE GALLERY</h1>
       <div className="flex flex-wrap justify-evenly items-center  gap-1 w-11/12  sm:w-4/5  md:gap-4 h-full md:w-4/5">
         {images.map((image, index) => (
           <div key={index} className="card group h-58 w-full sm:h-64 sm:w-5/12 md:h-80 md:w-1/4">

@@ -17,7 +17,6 @@ function Home() {
       scrollTrigger:{
         trigger:".gintro",
         start:"top center",
-        markers:"true"
       },
     });
 
@@ -28,8 +27,8 @@ function Home() {
     t1_1.from(".ginfo-head",{xPercent:200,duration:1},0);
     t1_1.from(".ginfo-content",{scale:0,duration:1.5},1);
 
-    t1_1.from(".gknow-more",{y:-50,duration:1,ease:"bounce.out"},1.5);
-    t1_1.from(".gknow-more",{opacity:0,duration:1},1.5);
+    t1_1.from(".gknow-more",{y:-100,duration:1,ease:"bounce.out"},2);
+    t1_1.from(".gknow-more",{opacity:0,duration:1},2.5);
 
 
   })

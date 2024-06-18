@@ -63,7 +63,10 @@ const BlogHome = () => {
         <p className="px-10 py-10 text-justify">
           {post.post}
         </p>
-        <a href={`https://${post.link}`} className='font-semibold text-blue-400'>Link</a>
+        <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gmore-event">
+            <a href={`https://${post.link}`} className='font-semibold text-white'>Link</a>
+        </button>
+        
         <h2 className='font-medium'>Author : {post.author.name}</h2>
         <div className='flex sm:w-2/4 justify-evenly my-4 text-black'>
         </div>

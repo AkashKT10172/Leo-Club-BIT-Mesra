@@ -8,7 +8,7 @@
   top:0;
 }
 .activeapp{
-  background-color: rgb(72, 137, 242);
+  background-color: #4889f2;
 }
 .nav{  
   height : 60px;
@@ -89,43 +89,4 @@ color :white;
   .navigation-items.active {
       right : 0;
   }
-}
-.mode-change {
-  position : relative;
-  margin-right :10px;
-  margin-left: 30px;
-}
-@media screen and (max-width:780px) {
-  .mode-change{
-    margin-left: 0px;
-  }
-}
-.fa-sun, .fa-moon {
-  color : white;
-}
-.sun, .moon{
-  width: fit-content;
-  height: fit-content;
-}
-.moon{
-  position : absolute;
-  inset:0;
-}
-.moon-logo {
-  opacity : 0;
-  transform : translateY(30%) rotateZ(50deg);
-  transition : all 1s ease-out; 
-}
-.sun-logo {
-  opacity : 1;
-  transform : translateY(0) rotatez(0deg);
-  transition : all 1s ease-out;
-}
-.moon-anim {
- opacity:1;
- transform: translateY(0) rotateZ(0deg);
-}
-.sun-anim {
- opacity : 0;
- transform : translateY(30%) rotatez(100deg);
 }

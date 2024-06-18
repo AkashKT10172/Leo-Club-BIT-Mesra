@@ -11,16 +11,16 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutUs = () => {
   const motto=useRef();
   useGSAP(()=>{
-    gsap.from(motto.current,{
-      transform:'translateX(80%)',
-      duration:2,
-      scrollTrigger:{
-        trigger:motto.current,
-        scroller:"body",
-        start:"top 90%",
-      },
-      ease:"none"
-    })  
+    // gsap.from(motto.current,{
+    //   transform:'translateX(100%)',
+    //   duration:2,
+    //   scrollTrigger:{
+    //     trigger:motto.current,
+    //     scroller:"body",
+    //     start:"top 90%",
+    //   },
+    //   ease:"none"
+    // })  
   })
   return (
     <div className='Acontainer overflow-x-hidden'>

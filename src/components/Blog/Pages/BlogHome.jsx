@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { deAuthorise } from '../../auth/authSlice';
 import React, { useState, useEffect } from 'react'
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
+import { query, orderBy, limit } from 'firebase/firestore';
 
 const BlogHome = () => {
   const isAuth = useSelector((state) => state.auth.value);
@@ -21,9 +22,11 @@ const BlogHome = () => {
   const [loading, setLoading] = useState(false);
   const postCollectionRef = collection(db, 'posts');
 
+  const q = query(postCollectionRef, orderBy("date", "desc"));
+
   const getPosts = async() => {
     setLoading(true);
-    const data = await getDocs(postCollectionRef);
+    const data = await getDocs(q);
     setPostLists(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
     setLoading(false)
   }
@@ -60,11 +63,11 @@ const BlogHome = () => {
     <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text p-1 text-center">LATEST POSTS</h1>
       {postLists.length === 0 ? <h3>No Posts to show</h3> : postLists.map((post) => {
         return (
-          <div key={post.id} className='flex flex-col items-center p-4 bg-white '>
-            <div className='border-2 flex lg:flex-row flex-col-reverse justify-center items-center mx-4 my-4 p-2 rounded-lg lg:w-2/4 w-full h-auto bg-[#fff9f2] shadow-md hover:shadow-lg hover:shadow-orange-100 transition-all rounded-md'>
-              <div className='lg:w-2/4 w-full sm:h-96 h-auto lg:mr-4 p-2 rounded-lg'>
+          <div key={post.id} className='flex flex-col items-center p-4 bg-white h-auto '>
+            <div className='border-2 flex lg:flex-row flex-col-reverse justify-center items-center mx-4 my-4 p-2 lg:w-2/4 w-full h-auto bg-[#fff9f2] shadow-md hover:shadow-lg hover:shadow-orange-100 transition-all rounded-md'>
+              <div className='lg:w-2/4 w-full h-auto lg:mr-4 p-2 rounded-lg'>
               <h5 className='text-black min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center'>{post.title}</h5>
-              <p className="h-auto sm:h-[65%]">
+              <p className="md:min-h-72 text-justify">
                 {post.post}
               </p>
               <h5 className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500'>Author : {post.author.name}</h5>

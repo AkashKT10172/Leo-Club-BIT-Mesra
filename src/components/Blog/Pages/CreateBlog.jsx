@@ -11,6 +11,7 @@ const CreateBlog = () => {
   const[title, setTitle] = useState('');
   const[post, setPost] = useState('');
   const[link, setLink] = useState('');
+  const[date, setDate] = useState('');
 
   const [imgUrl, setImgUrl] = useState('')
   const [img, setImg] = useState('')
@@ -38,6 +39,7 @@ const CreateBlog = () => {
           title,
           post,
           link,
+          date,
           imgUrl,
           author: {
             name : auth.currentUser.email,
@@ -75,6 +77,11 @@ const CreateBlog = () => {
           <label htmlFor="Link">Link</label>
           <input className='w-full border-2 border-gray-500' type="text" placeholder='Link'  
           onChange={(e) => setLink(e.target.value)}/>
+        </div>
+        <div className='w-full'>
+          <label htmlFor="Date">Date</label>
+          <input className='w-full border-2 border-gray-500' type="text" placeholder='Date in mm-dd-yyyy Format'  
+          onChange={(e) => setDate(e.target.value)}/>
         </div>
         <div className='h-64 w-full'>
           <label htmlFor="posts">Post</label>

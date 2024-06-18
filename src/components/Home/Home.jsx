@@ -59,8 +59,8 @@ function Home() {
     <IntroDiv />
     <Event />
     <TeamDiv />
-    {/* <Blog /> */}
-    <President />
+    <Blog />
+    {/* <President /> */}
     <Contact />
     </>
   )

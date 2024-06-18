@@ -16,77 +16,77 @@ export default {
             designation : "General Secretary",
             instagram : "akashdidwhat",
             linkedin : "null",
-            twitter : ""
+            mail : ""
         },
         {   image : khushi,
             name : "Khushi Sharma",
             designation : "General Secretary",
             instagram : "khushisharma_.15",
             linkedin : "khushi-sharma-267108269",
-            twitter : ""
+            mail : ""
         },
         {   image : adarsh,
             name : "Adarsh Raj",
             designation : "Joint Secretary",
             instagram : "adarsh_raj18",
             linkedin : "adarsh-raj-70559725b",
-            twitter : ""
+            mail : ""
         },
         {  image : akash,
             name : "Akash Kumar Tiwary",
             designation : "Treasurer",
             instagram : "akashdidwhat",
             linkedin : "null",
-            twitter : ""
+            mail : ""
         },
         {   image : akash,
             name : "Akash Kumar Tiwary",
             designation : "Co-Treasurer",
             instagram : "akashdidwhat",
             linkedin : "null",
-            twitter : ""
+            mail : ""
         },
         {   image : rajjoo,
             name : "Rajnish Tiwary",
             designation : "Events Head",
             instagram : "rajjjjoooooo",
             linkedin : "rajnish-tiwary-a83069263",
-            twitter : ""
+            mail : ""
         },
         {   image : divya,
             name : "Divya Priyadarshini",
             designation : "Events Head",
             instagram : "divvvyap",
             linkedin : "divya-priyadarshini",
-            twitter : ""
+            mail : ""
         },
         {   image : anjan,
             name : "Anjan Kumar Rajak",
             designation : "Events Head",
             instagram : "anjannnnn___",
             linkedin : "anjan-kumar-rajak-babb7b268",
-            twitter : ""
+            mail : ""
         },
         {   image : akash_ori,
             name : "Akash Kumar Tiwary",
             designation : "Webmaster",
             instagram : "akashdidwhat",
             linkedin : "akashkt10172",
-            twitter : "tweetsbyakash"
+            mail : "1akashtiwary@gmail.com"
         },
         {   image : sanchay,
             name : "Sanchay Gupta",
             designation : "Resource lead",
             instagram : "",
             linkedin : "sanchay-gupta-49b543264",
-            twitter : ""
+            mail : ""
         },
         {   image :shreya,
             name : "Shreya Singh",
             designation : "Executive member",
             instagram : "_shreyasingh04",
             linkedin : "shreya-singh-b34ba0297",
-            twitter : ""
+            mail : ""
         }
     ]
 };

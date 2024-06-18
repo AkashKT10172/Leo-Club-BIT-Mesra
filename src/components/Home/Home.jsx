@@ -8,7 +8,7 @@ import President from './President/President.jsx'
 import Contact from './ContactUs/Contact.jsx'
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 function Home() {
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
@@ -17,6 +17,13 @@ function Home() {
       scrollTrigger:{
         trigger:".gintro",
         start:"top center",
+      },
+    });
+
+    let t1_2=gsap.timeline({
+      scrollTrigger:{
+        trigger:".gevent",
+        start:"top 98%",
       },
     });
 
@@ -29,6 +36,20 @@ function Home() {
 
     t1_1.from(".gknow-more",{y:-100,duration:1,ease:"bounce.out"},2);
     t1_1.from(".gknow-more",{opacity:0,duration:1},2.5);
+
+    t1_2.from(".gevent",{y:200,duration:1});
+    t1_2.from(".gevent",{opacity:0,duration:1},0);
+    t1_2.from(".gevent-heading",{scale:0,duration:0.5},1);
+    t1_2.from(".gevent-info",{y:150,duration:1.5},1.5);
+    t1_2.from(".gevent-info",{opacity:0,duration:1},1.5);
+    t1_2.from(".gevent-img",{x:150,duration:1.5},1.5)
+    t1_2.from(".gevent-img",{opacity:0,duration:1},1.5);
+
+    t1_2.from(".gmore-event",{y:-100,duration:1,ease:"bounce.inOut"},2);
+    t1_2.from(".gmore-event",{opacity:0,duration:1},2.5);
+
+
+  ;
 
 
   })

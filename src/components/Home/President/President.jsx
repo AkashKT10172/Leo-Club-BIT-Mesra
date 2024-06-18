@@ -9,7 +9,7 @@ function President() {
   return (
     <>
     <div className='presi-main-div sm:px-4 sm:py-8 py-2 px-2'>
-    <div className='border-2 border-gray-600 rounded-md pb-5 boxDivPresi'>
+    <div className='border-2 border-gray-600 rounded-md pb-5 boxDivPresi shadow-lg shadow-blue-400'>
     <div className='headingPresident flex justify-center items-center rounded-t-2xl'>
      <h1 className="text-4xl text-center font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text flex flex-wrap">PRESIDENT'S WORD</h1>
     </div>

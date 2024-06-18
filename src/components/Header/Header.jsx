@@ -48,8 +48,8 @@ function Navbar() {
     <div className={((usePathname()==="/") && !navVis) ? 'app' : 'app activeapp'}>
       <div className="nav"> 
         <div className = "logo-container">
-        <NavLink to="/" className="logo-cont-a"><img src={leoLogo}></img></NavLink>
-        <NavLink to="/" className="logo-cont-a"><img src={bitLogo}></img></NavLink>
+        <NavLink to="/" className="logo-cont-a" onClick={handleNavClick}><img src={leoLogo}></img></NavLink>
+        <NavLink to="https://www.bitmesra.ac.in/" className="logo-cont-a"><img src={bitLogo}></img></NavLink>
       </div>
       <div className={`navigation-items ${toggleHamClass}`}>
       <NavLink to="/" className={({isActive}) => `block py-2 pr-2 pl-2 duration-200 ${isActive ? "text-orange-700" : "text-white"} 

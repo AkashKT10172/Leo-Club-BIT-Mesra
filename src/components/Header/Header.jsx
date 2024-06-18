@@ -1,6 +1,4 @@
 import './Header.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 import leoLogo from './leoLogo.png'
 import {useState} from 'react'
 import { useLocation } from 'react-router-dom';
@@ -28,12 +26,6 @@ function Navbar() {
       if(window.scrollY <=60) setNavVis(!navVis);
   }
   let toggleHamClass = navState ? 'active':null;
-
-  const [modeState, setModeState] = useState(false);
-  const handleModeClick = () => {
-        setModeState(!modeState);
-  }
-  let toggleModeClass = modeState ? '-anim':null;
   
   const changeBg = () => {
     if(window.scrollY >=100){
@@ -82,10 +74,6 @@ function Navbar() {
               <span className="ham-bar"></span>
               <span className="ham-bar"></span>
       </div>
-      </div>
-      <div className="mode-change" onClick = {handleModeClick}>
-          <div className={`sun sun-logo sun${toggleModeClass}`}><FontAwesomeIcon icon={faSun} size="xl" /></div>
-          <div className={`moon moon-logo moon${toggleModeClass}`}><FontAwesomeIcon icon={faMoon} size ="xl"/></div>
       </div>
     </div>
   );

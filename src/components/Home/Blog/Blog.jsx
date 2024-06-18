@@ -48,7 +48,7 @@ const BlogHome = () => {
   }
   return (
     <>
-    <div className='mt-[80px]'>
+    <div>
       {postLists.length === 0 ? <h3>No Posts to show</h3> : postLists.map((post) => {
         return (
         <>

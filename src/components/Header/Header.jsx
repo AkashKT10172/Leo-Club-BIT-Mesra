@@ -48,7 +48,7 @@ function Navbar() {
     <div className={((usePathname()==="/") && !navVis) ? 'app' : 'app activeapp'}>
       <div className="nav"> 
         <div className = "logo-container">
-        <NavLink to="/" className="logo-cont-a" onClick={handleNavClick}><img src={leoLogo}></img></NavLink>
+        <NavLink to="/" className="logo-cont-a" onClick={() => window.scrollTo(0,0)}><img src={leoLogo}></img></NavLink>
         <NavLink to="https://www.bitmesra.ac.in/" className="logo-cont-a"><img src={bitLogo}></img></NavLink>
       </div>
       <div className={`navigation-items ${toggleHamClass}`}>

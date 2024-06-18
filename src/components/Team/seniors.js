@@ -15,7 +15,7 @@ export default {
             designation : "President",
             instagram : "saucewhat_",
             linkedin : "shashwatjha951",
-            mail : ""
+            mail : "jhashashwat9@gmail.com"
         },
         {   image : sakshi,
             name : "Sakshi Kumari",

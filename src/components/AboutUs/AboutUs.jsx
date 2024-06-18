@@ -1,7 +1,7 @@
 import {React,useRef }from 'react'
 import {Typewriter} from 'react-simple-typewriter'
 import FramerAnimation from './FramerAnimation'
-import grpImg from '/src/components/AboutUs/img3.jpg'
+import grpImg from '/src/components/AboutUs/batchphotok20.jpg'
 import {gsap} from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import {useGSAP} from '@gsap/react'
@@ -12,12 +12,12 @@ const AboutUs = () => {
   const motto=useRef();
   useGSAP(()=>{
     gsap.from(motto.current,{
-      transform:'translateX(100%)',
-      duration:3,
+      transform:'translateX(80%)',
+      duration:2,
       scrollTrigger:{
         trigger:motto.current,
         scroller:"body",
-        start:"top 70%",
+        start:"top 90%",
       },
       ease:"none"
     })  
@@ -26,7 +26,7 @@ const AboutUs = () => {
     <div className='Acontainer overflow-x-hidden'>
      <div className='imgdiv flex h-auto relative max-h-[96vh] justify-center -m-1'>
       <img src={grpImg} className='object-cover bg-fixed z-0'></img>
-      <h1 className='text-xl sm:text-4xl absolute top-1/2  text-white font-nova font-semibold z-10'>
+      <h1 className='text-xl sm:text-4xl absolute top-1/2 font-nova text-white font-semibold z-10'>
          About{' '}
         <span className='font-bold font-serif ' > <Typewriter
             words={['Us',"LEO"]}

@@ -17,10 +17,9 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, Pass)
     .then((userCredential) => {
     const user = userCredential.user;
-    console.log(user);
     localStorage.setItem('isAuth', true);
     dispatch(authorise());
-    navigate('/blog/createblog');
+    navigate('/admin');
     })
   }
   return (
@@ -48,8 +47,8 @@ const Login = () => {
             </button>
             <button 
             className='mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
-            onClick={() => navigate('/blog')}>
-              Back to Blog Page
+            onClick={() => navigate('/')}>
+              Back to Home Page
             </button>
           </form>
         </div>

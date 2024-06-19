@@ -10,6 +10,9 @@ import Events from './components/Events/Events.jsx'
 import Login from './components/Blog/Pages/Login.jsx'
 import BlogHome from './components/Blog/Pages/BlogHome.jsx'
 import CreateBlog from './components/Blog/Pages/CreateBlog.jsx'
+import UploadImage from './components/newGallery/uploadImage.jsx'
+import MyGallery from './components/newGallery/myGallery.jsx'
+import Admin from './components/admin/Admin.jsx'
 
 const Gallery = lazy(() => import('./components/Gallery/Gallery.jsx' ));
 
@@ -33,7 +36,7 @@ const router = createBrowserRouter(
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <Team/>
           </Suspense>} />
-        <Route path="gallery" element={
+          <Route path="gallery" element={
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <Gallery />
           </Suspense>} />
@@ -41,13 +44,25 @@ const router = createBrowserRouter(
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <BlogHome />
           </Suspense>} />
-          <Route path="blog/login" element={
+          <Route path="login" element={
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <Login />
           </Suspense>} />
-          <Route path="blog/createblog" element={
+          <Route path="createblog" element={
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <CreateBlog />
+          </Suspense>} />
+          <Route path="uploadImage" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <UploadImage />
+          </Suspense>} />
+          <Route path="myGallery" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <MyGallery />
+          </Suspense>} />
+          <Route path="admin" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <Admin />
           </Suspense>} />
       </Route>
   )

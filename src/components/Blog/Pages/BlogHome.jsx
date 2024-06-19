@@ -1,23 +1,13 @@
-import {Link} from 'react-router-dom'
-import { signOut} from 'firebase/auth';
 import { auth, db } from '../../../firebase-config';
 import { useSelector, useDispatch } from 'react-redux'
-import { deAuthorise } from '../../auth/authSlice';
 import React, { useState, useEffect } from 'react'
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy, limit } from 'firebase/firestore';
 
+
 const BlogHome = () => {
   const isAuth = useSelector((state) => state.auth.value);
-  const dispatch = useDispatch()
-
-  const signUserOut = () => {
-    signOut(auth).then(() => {
-      localStorage.clear();
-      dispatch(deAuthorise);
-      window.location.pathname = "/blog";
-  })
-  }
+  
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
   const postCollectionRef = collection(db, 'posts');
@@ -43,24 +33,14 @@ const BlogHome = () => {
   if(loading) {
     return (
       <>
-      <div className='sm:border-t-0 border-t-2 py-2 mt-[60px] bg-white'>
-      {!isAuth ? <Link className='mx-2 text-green-500' to="/blog/login">Admin-Log-In</Link> :
-      (
-        <div className=''>
-        <Link className='mx-2' to="/blog/createblog">Create Post</Link>
-        <button className='bg-teal-500 hover:bg-teal-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm' onClick = {signUserOut}>Log-Out</button>
-        </div>
-      )
-      }
-    </div>
-    <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
-    </>
+        <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
+      </>
     )
   }
   return (
     <>
     <div className='mt-[80px]'>
-    <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text p-1 text-center">LATEST POSTS</h1>
+    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text p-1 text-center">LATEST POSTS</h1>
       {postLists.length === 0 ? <h3>No Posts to show</h3> : postLists.map((post) => {
         return (
           <div key={post.id} className='flex flex-col items-center p-4 bg-white h-auto '>
@@ -84,16 +64,6 @@ const BlogHome = () => {
           </div>
         )
       })}
-    </div>
-    <div className='sm:border-t-0 border-t-2 py-2 bg-white'>
-      {!isAuth ? <Link className='mx-2 text-green-500' to="/blog/login">Admin-Log-In</Link> :
-      (
-        <div className=''>
-        <Link className='mx-2' to="/blog/createblog">Create Post</Link>
-        <button className='bg-teal-500 hover:bg-teal-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm' onClick = {signUserOut}>Log-Out</button>
-        </div>
-      )
-      }
     </div>
     </>
   )

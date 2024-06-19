@@ -56,7 +56,7 @@ const CreateBlog = () => {
   console.log(isAuth)
   useEffect(() => {
     if(!isAuth) {
-      navigate('/blog/login')
+      navigate('/login')
     }
   })
   return (
@@ -92,8 +92,8 @@ const CreateBlog = () => {
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={createPost}>Publish</button>
         <button 
             className='mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
-            onClick={() => navigate('/blog')}>
-              Back to Blog Page
+            onClick={() => navigate('/admin')}>
+              Back to Admin Page
             </button>
       </div>
        </div>

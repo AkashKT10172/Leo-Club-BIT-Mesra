@@ -25,7 +25,7 @@ const Login = () => {
   return (
      <div className='bg-gray-800 h-screen flex justify-center mt-[60px]'>
       <div className='flex flex-col items-center sm:w-[400px] w-[300px]  mx-2 h-80 my-4 p-4 bg-teal-200 border-2 border-gray-500'>
-        <h1 className='text-red-500 underline'>ALL HAIL QUEEN RHANEYRA TARGERYEN</h1>
+        <h1 className='text-red-500 underline'>ALL HAIL QUEEN RHANEYRA TARGARYEN</h1>
         <div className='w-full p-4'>
           <form className='flex flex-col items-start w-full' onSubmit={handleSubmit}>
             <label className='h-[25px]' htmlFor="email">Email</label>

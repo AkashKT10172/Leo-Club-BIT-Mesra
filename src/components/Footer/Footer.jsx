@@ -76,10 +76,8 @@ function Footer() {
         href={`https://www.instagram.com/leoclub_bitmesra/`}><FontAwesomeIcon icon={faInstagram} size="xl"/></a></li>
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-[#4889f2] transition-all'><a target='_blank' 
         href={`https://www.linkedin.com/company/leo-club-bit-mesra/`}><FontAwesomeIcon icon={faLinkedin} size="xl"/></a></li>
+        <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold px-2 rounded-sm' onClick = {() => {window.scrollTo(0,0); navigate('/admin')}}>Admin Portal</button>
         </div>
-      </div>
-      <div className='px-4 sm:border-t-0 border-t-2 py-2 bg-black flex justify-center'>
-        <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm mx-2' onClick = {() => {window.scrollTo(0,0); navigate('/admin')}}>Admin Portal</button>
       </div>
       </footer>
     </>

@@ -4,11 +4,9 @@ import IntroDiv from './Intro/Intro.jsx';
 import Event from './Event/Event.jsx';
 import TeamDiv from './TeamDiv/TeamDiv.jsx';
 import Blog from './Blog/Blog.jsx';
-import President from './President/President.jsx';
 import Contact from './ContactUs/Contact.jsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { startAt } from 'firebase/firestore';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +16,7 @@ function Home() {
       { trigger: '.glogo-image', animation: { xPercent: -180, duration: 1 } },
       { trigger: '.gmotto', animation: { y: 20, opacity: 0, duration: 1.5 } },
       { trigger: '.ginfo-head', animation: { xPercent: 200, duration: 1 } },
-      { trigger: '.ginfo-content', animation: { scale: 0, duration: 1.5 } },
+      { trigger: '.ginfo-content', animation: { scale: 0, duration: 1 } },
       { trigger: '.gknow-more', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
     ];
 

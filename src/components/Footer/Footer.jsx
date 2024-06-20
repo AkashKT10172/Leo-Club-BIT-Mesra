@@ -20,7 +20,7 @@ function Footer() {
   return (
     <>
       <footer className='min-h-ful event-main-div'>
-        {(usePathname() === '/') ? <div className='bg-black h-48'></div> :<></> 
+        {(usePathname() === '/') ? <div className='bg-black h-36'></div> :<></> 
         }
       <div className='flex justify-center items-center md:flex-row flex-col-reverse bg-black text-white py-4 px-4 border-blue-300'>
         <div className='sm:w-2/4 w-full flex justify-center items-center sm:flex-row flex-col'>

@@ -1,10 +1,28 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
 import image from './leoEvent.png'
 import './Event.css'
 import { handleClick } from '../../onClick'
+import gsap from 'gsap'
 
 function Event() {
+  useEffect(() => {
+      const blogelements = [
+        { trigger: '.gevent-heading', animation: { scale: 0,opacity:0, duration: 1} },
+        { trigger: '.gevent-img', animation: { x: 150, opacity: 0, duration: 1.5 } },
+        { trigger: '.gevent-info', animation: { y: 150, opacity: 0, duration: 1.5 } },
+        { trigger: '.gmore-event', animation: { y: -100, opacity: 0, duration: 1, ease: 'bounce.out' } },
+        ];
+       blogelements.forEach((el) => {
+           gsap.from(el.trigger, {
+               ...el.animation,
+                scrollTrigger: {
+               trigger: el.trigger,
+               start:  el.trigger === ".gmore-event" ? "top 90%":"top 80%",
+                },
+            });
+        });
+  }, []);
   return (
     <>
     <div className='event-main-div  sm:px-4 sm:py-8 py-2 px-2 overflow-hidden gevent'>

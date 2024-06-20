@@ -52,7 +52,7 @@ const BlogHome = () => {
               </p>
               <h5 className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>Author : {post.author.name}</h5>
               <a href={`https://${post.link}`} className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>{post.link}</a>
-              {isAuth && post.author.id === auth.currentUser.uid ? <div className='min-h-[10%] h-auto'>
+              {isAuth ? <div className='min-h-[10%] h-auto'>
                   <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
                     onClick={() => {deletePost(post.id)}}>Delete</button>
               </div> : <></>}    

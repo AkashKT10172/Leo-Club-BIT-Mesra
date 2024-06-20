@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import React, { useState, useEffect } from 'react'
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy, limit } from 'firebase/firestore';
+import gsap from 'gsap'
 
 
 const BlogHome = () => {
@@ -21,6 +22,12 @@ const BlogHome = () => {
     setLoading(false)
   }
   useEffect(() => {
+      gsap.from(".bheading",{
+        y:-100,
+        duration:1,
+        ease:"power2.out",
+        touchAction:"play none none none",
+      })
     getPosts();
   },[])
 
@@ -39,8 +46,8 @@ const BlogHome = () => {
   }
   return (
     <>
-    <div className='mt-[80px]'>
-    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text p-1 text-center">LATEST POSTS</h1>
+    <div className='mt-[80px] '>
+    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text p-1 text-center bheading">LATEST POSTS</h1>
       {postLists.length === 0 ? <h3>No Posts to show</h3> : postLists.map((post) => {
         return (
           <div key={post.id} className='flex flex-col items-center p-4 bg-white h-auto '>

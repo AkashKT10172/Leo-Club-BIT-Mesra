@@ -1,20 +1,30 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import juniors from './juniors'
 import seniors from './seniors';
 import faculty from './faculty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import gsap from 'gsap'
 const myJuniorMem = juniors.juniorMembers;
 const mySeniorMem = seniors.seniorMembers;
 const myFacultyMem = faculty.facultyMembers;
 
 
 const Team = () => {
+  useEffect(()=>{
+    gsap.from(".theading",{
+      y:-100,
+      opacity:0,
+      duration:1,
+      ease:"power2.out",
+      touchAction:"play none none none",
+    })
+  });
   return (
     <>
     <div className='mt-16 flex flex-col items-center justify-center'>
     <div>
-    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text my-4 p-1 text-center">FACULTY MEMBERS</h1>
+    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text my-4 p-1 text-center theading">FACULTY MEMBERS</h1>
     <div className='flex flex-wrap justify-center items-center' >
     {myFacultyMem.map((mem)=> 
     <div className='flex flex-col object-contain justify-evenly items-center border-2 h-96 w-72 px-2 m-3 bg-[#fff9f2] rounded-md md:h-96 md:w-96 ease-in-out duration-200 sm:hover:scale-105 hover:shadow-lg hover:shadow-orange-100'>

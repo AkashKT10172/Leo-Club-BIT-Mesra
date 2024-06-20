@@ -21,7 +21,7 @@ function Home() {
     ];
 
     const eventElements = [
-      { trigger: '.gevent-heading', animation: { scale: 0, duration: 0.75 } },
+      { trigger: '.gevent-heading', animation: { scale: 0, duration: 1.25 } },
       { trigger: '.gevent-img', animation: { x: 150, opacity: 0, duration: 1.5 } },
       { trigger: '.gevent-info', animation: { y: 150, opacity: 0, duration: 1.5 } },
       { trigger: '.gmore-event', animation: { y: -100, opacity: 0, duration: 1, ease: 'bounce.out' } },
@@ -43,6 +43,7 @@ function Home() {
           scrollTrigger: {
             trigger: el.trigger,
             start:el.trigger === ".gmotto" || el.trigger === ".gmore-event" ? "top 90%" : start,
+            toggleActions:"play none none none"
           },
         });
       });

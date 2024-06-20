@@ -5,6 +5,7 @@ import { deAuthorise } from '../auth/authSlice';
 import React, { useState, useEffect } from 'react'
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy } from 'firebase/firestore';
+import gsap from 'gsap';
 
 const MyGallery = () => {
   const isAuth = useSelector((state) => state.auth.value);
@@ -30,7 +31,14 @@ const MyGallery = () => {
     setLoading(false)
   }
   useEffect(() => {
+     
     getImages();
+    gsap.from(".gheading",{
+      y:-100,
+      opacity:0,
+      duration:1,
+      ease:"power2.out",
+    })
   },[])
 
   const deletePost = async(id) => {
@@ -63,7 +71,7 @@ const MyGallery = () => {
   return (
     <>
     <div className="h-full w-full flex flex-col justify-center items-center mb-6 mt-16">
-    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text p-1 my-5 text-center">IMAGE GALLERY</h1>
+    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text p-1 my-5 text-center gheading">IMAGE GALLERY</h1>
         <div className="w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 grid-container">
         {images.map((image) => (
           <div key={image.id} className="relative overflow-hidden max-h-[300px] rounded-md grid-item"> 

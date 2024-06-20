@@ -5,7 +5,7 @@ import { deAuthorise } from '../auth/authSlice';
 import React, { useState, useEffect } from 'react'
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy } from 'firebase/firestore';
-import gsap from 'gsap';
+
 
 const MyGallery = () => {
   const isAuth = useSelector((state) => state.auth.value);
@@ -30,16 +30,6 @@ const MyGallery = () => {
     setImages(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
     setLoading(false)
   }
-  useEffect(() => {
-     
-    getImages();
-    gsap.from(".gheading",{
-      y:-100,
-      opacity:0,
-      duration:1,
-      ease:"power2.out",
-    })
-  },[])
 
   const deletePost = async(id) => {
       const toDeletedoc = doc(db, 'images', id);

@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import React, { useState, useEffect } from 'react'
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy, limit } from 'firebase/firestore';
-import gsap from 'gsap'
-
 
 const BlogHome = () => {
   const isAuth = useSelector((state) => state.auth.value);
@@ -22,12 +20,6 @@ const BlogHome = () => {
     setLoading(false)
   }
   useEffect(() => {
-      gsap.from(".bheading",{
-        y:-100,
-        duration:1,
-        ease:"power2.out",
-        touchAction:"play none none none",
-      })
     getPosts();
   },[])
 

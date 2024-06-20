@@ -3,20 +3,8 @@ import data from './data'
 import { useState,useRef,useEffect } from 'react'
 import './Event.css'
 import Ecards from './components/Ecards';
-import gsap from 'gsap';
-import {useGSAP} from '@gsap/react'
 
 function Events() {
-
-  useEffect(()=>{
-    gsap.from(".eheading",{
-      y:-100,
-      opacity:0,
-      duration:1,
-      ease:"power2.out",
-      touchAction:"play none none none",
-    })
-  });
 
   const[edata,setData]=useState(data);
   return (

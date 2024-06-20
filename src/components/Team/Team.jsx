@@ -4,22 +4,13 @@ import seniors from './seniors';
 import faculty from './faculty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import gsap from 'gsap'
+
 const myJuniorMem = juniors.juniorMembers;
 const mySeniorMem = seniors.seniorMembers;
 const myFacultyMem = faculty.facultyMembers;
 
 
 const Team = () => {
-  useEffect(()=>{
-    gsap.from(".theading",{
-      y:-100,
-      opacity:0,
-      duration:1,
-      ease:"power2.out",
-      touchAction:"play none none none",
-    })
-  });
   return (
     <>
     <div className='mt-16 flex flex-col items-center justify-center'>

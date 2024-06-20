@@ -40,13 +40,13 @@ function Footer() {
               <NavLink to='/about' className='py-2 underline hover:text-[#4889f2]' onClick={handleClick}>About Us</NavLink>
             </div>
         </div>
-        <div className='sm:w-2/4 w-full flex flex-wrap justify-center items-center'>
+        <div className='md:w-2/4 w-full flex flex-wrap justify-center items-center'>
             <div className='flex flex-wrap justify-center items-center'>
               {galleryImgs.map((img) =>
-              <img className = "member-image h-44 w-1/3 px-2 mt-3" src={img.image}/>
+              <img className = "member-image md:h-44 sm:h-32 h-24  w-1/3 px-2 mt-3" src={img.image}/>
             )}
             </div>
-            <NavLink to='/gallery' className='py-2 underline text-[#4889f2]' onClick={handleClick}>See all Images &#8594;</NavLink>
+            <NavLink to='/myGallery' className='py-2 underline text-[#4889f2]' onClick={handleClick}>See all Images &#8594;</NavLink>
         </div>
       </div>
       <div className='bg-black h-auto text-white flex flex-col sm:flex-row px-6 py-3 border-t-2 border-white'>

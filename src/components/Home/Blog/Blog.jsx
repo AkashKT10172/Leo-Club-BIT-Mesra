@@ -55,7 +55,7 @@ const BlogHome = () => {
       {postLists.length === 0 ? <h3>No Posts to show</h3> : postLists.map((post) => {
         return (
         <>
-          <div className='blog-main-div sm:px-4 sm:py-8 py-2 px-2'>
+          <div className='blog-main-div sm:px-4 sm:py-8 py-2 px-2 overflow-hidden'>
           <div className='border-2 border-gray-600 rounded-md pb-5 boxDivblog'>
           <div className='headingblogdent flex justify-center items-center rounded-t-2xl '>
             <h1 className="text-4xl text-center font-black bg-blue-700 text-transparent bg-clip-text flex flex-wrap  gblog-heading">LATEST POST</h1>

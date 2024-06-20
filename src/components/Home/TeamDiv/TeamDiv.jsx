@@ -6,7 +6,7 @@ import { handleClick } from '../../onClick'
 function TeamDiv() {
   return (
     <>
-    <div className ="team-main">
+    <div className ="team-main overflow-hidden">
     <div className="team-image gprof-image">
         <img src={profIn} alt="ok"/>
     </div> 

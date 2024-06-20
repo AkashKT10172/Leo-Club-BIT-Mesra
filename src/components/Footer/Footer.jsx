@@ -8,13 +8,20 @@ import leoLogo from './leoLogo.png'
 const galleryImgs = galleryImg.images;
 import { handleClick } from '../onClick'
 import { useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 
 function Footer() {
+  const usePathname = () => {
+    const location = useLocation();
+    return location.pathname;
+  }
   const navigate = useNavigate()
   return (
     <>
       <footer className='min-h-ful event-main-div'>
+        {(usePathname() === '/') ? <div className='bg-black h-48'></div> :<></> 
+        }
       <div className='flex justify-center items-center md:flex-row flex-col-reverse bg-black text-white py-4 px-4 border-blue-300'>
         <div className='sm:w-2/4 w-full flex justify-center items-center sm:flex-row flex-col'>
             <div className='sm:w-2/4 w-full flex flex-col justify-center items-center '>
@@ -68,8 +75,6 @@ function Footer() {
       <div className='bg-black h-auto flex flex-col  px-5 py-5 sm:flex-row border-t-2 border-white'>
         <p className='text-white sm:w-2/4 flex justify-center items-center sm:justify-start'>2024 © Leo Club BIT Mesra</p>
         <div className='flex sm:w-2/4 justify-evenly my-1'>
-        <li className= 'text-white list-none px-1 hover:scale-125 hover:text-[#4889f2] transition-all'><a target='_blank' 
-        href={`https://www.twitter.com/`}><FontAwesomeIcon icon={faTwitter} size="xl"/></a></li>
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-[#4889f2] transition-all'><a target='_blank' 
         href={`https://www.facebook.com/LeoBITMesra`}><FontAwesomeIcon icon={faFacebook} size="xl"/></a></li>
         <li className= 'text-white list-none px-1 hover:scale-125 hover:text-[#4889f2] transition-all'><a target='_blank' 

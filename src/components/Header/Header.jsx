@@ -2,7 +2,7 @@ import './Header.css';
 import leoLogo from './leoLogo.png'
 import {useState} from 'react'
 import { useLocation } from 'react-router-dom';
-import {Link, NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import bitLogo from './bitLogo.png'
 
 function Navbar() {

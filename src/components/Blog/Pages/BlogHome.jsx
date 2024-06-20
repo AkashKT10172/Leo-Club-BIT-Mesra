@@ -46,19 +46,19 @@ const BlogHome = () => {
           <div key={post.id} className='flex flex-col items-center p-4 bg-white h-auto '>
             <div className='border-2 flex lg:flex-row flex-col-reverse justify-center items-center mx-4 my-4 p-2 lg:w-2/4 w-full h-auto bg-[#fff9f2] shadow-md hover:shadow-lg hover:shadow-orange-100 transition-all rounded-md'>
               <div className='lg:w-2/4 w-full h-auto lg:mr-4 p-2 rounded-lg'>
-              <h5 className='text-black min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center'>{post.title}</h5>
-              <p className="md:min-h-72 text-justify">
+              <h5 className='font-nova text-blue-900 min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center'>{post.title}</h5>
+              <p className="md:min-h-72 text-justify font-nova text-blue-900">
                 {post.post}
               </p>
-              <h5 className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500'>Author : {post.author.name}</h5>
-              <a href={`https://${post.link}`} className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500'>{post.link}</a>
+              <h5 className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>Author : {post.author.name}</h5>
+              <a href={`https://${post.link}`} className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>{post.link}</a>
               {isAuth && post.author.id === auth.currentUser.uid ? <div className='min-h-[10%] h-auto'>
                   <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
                     onClick={() => {deletePost(post.id)}}>Delete</button>
               </div> : <></>}    
               </div>
               <div className='lg:w-2/4 w-full flex justify-end '>
-              <img src={post.imgUrl} className='lg:w-96 w-full h-96 object-cover' />
+              <img src={post.imgUrl} className='lg:w-96 w-full h-96 object-cover border-2 border-gray-500' />
               </div>
             </div>
           </div>

@@ -19,7 +19,10 @@ const CreateBlog = () => {
   const handleImageSubmit = async () => {
       console.log(img);
       const imgRef = ref(imageDB, "files/" + img.name)
-      await uploadBytes(imgRef, img)
+      await uploadBytes(imgRef, img).
+      then(() => {
+        alert(`images have been Uploaded`);
+      })
       const downloadURL = await getDownloadURL(imgRef)
       console.log(downloadURL)
       setImgUrl(downloadURL)
@@ -79,8 +82,8 @@ const CreateBlog = () => {
           onChange={(e) => setLink(e.target.value)}/>
         </div>
         <div className='w-full'>
-          <label htmlFor="Date">Date</label>
-          <input className='w-full border-2 border-gray-500' type="text" placeholder='Date in mm-dd-yyyy Format'  
+          <label htmlFor="Date">Date & Time</label>
+          <input className='w-full border-2 border-gray-500' type="text" placeholder='yyyy-mm-dd _ time'  
           onChange={(e) => setDate(e.target.value)}/>
         </div>
         <div className='h-64 w-full'>

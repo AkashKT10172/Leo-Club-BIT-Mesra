@@ -63,7 +63,7 @@ const BlogHome = () => {
         <div className ="blog-main rounded-b-2xl">
         <div className="blog-info">
         <h5 className='text-black min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center gblog-title'>{post.title}</h5>
-        <p className="px-10 py-10 text-justify gblog-content">
+        <p className="px-10 py-10 text-center gblog-content">
           {post.post}
         </p>
         <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gmore-event gblog-button">

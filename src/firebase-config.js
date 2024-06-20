@@ -4,14 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDlxO8P4scrQZzFksnyqFkHJn1Rbvuve44",
-  authDomain: "leobitmesra-b5861.firebaseapp.com",
-  databaseURL: "https://leobitmesra-b5861-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "leobitmesra-b5861",
-  storageBucket: "leobitmesra-b5861.appspot.com",
-  messagingSenderId: "580023341159",
-  appId: "1:580023341159:web:e8e0da03a5bc055fe784c2",
-  databaseURL : "https://leobitmesra-b5861-default-rtdb.asia-southeast1.firebasedatabase.app/"
+  apiKey: "AIzaSyDTcyOkzJZ9Rr_DS579pQNotEDmpS4ok5o",
+  authDomain: "leobitmesra-dc627.firebaseapp.com",
+  projectId: "leobitmesra-dc627",
+  storageBucket: "leobitmesra-dc627.appspot.com",
+  messagingSenderId: "108307406656",
+  appId: "1:108307406656:web:212ae0e6f8eac3e2a2a4a5"
 };
 
 const app = initializeApp(firebaseConfig);

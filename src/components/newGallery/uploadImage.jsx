@@ -19,7 +19,7 @@ const UploadImage = () => {
         if(i == images.length - 1) {
             await uploadBytes(imgRef, images[i]).
             then(() => {
-                alert(`images have been Uploaded`);
+                alert(`image has been Uploaded`);
             })
         } else {
             await uploadBytes(imgRef, images[i])
@@ -69,8 +69,8 @@ const UploadImage = () => {
           <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick = {handleImageSubmit}>Upload</button>
         </div>
         <div className='w-full'>
-          <label htmlFor="Date">Date</label>
-          <input className='w-full border-2 border-gray-500' type="text" placeholder='Date in mm-dd-yyyy Format'  
+          <label htmlFor="Date">Date & Time</label>
+          <input className='w-full border-2 border-gray-500' type="text" placeholder='yyyy-mm-dd _ time'  
           onChange={(e) => setDate(e.target.value)}/>
         </div>
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={createPost}>Upload</button>

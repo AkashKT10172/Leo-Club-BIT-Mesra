@@ -55,24 +55,22 @@ const BlogHome = () => {
       {postLists.length === 0 ? <h3>No Posts to show</h3> : postLists.map((post) => {
         return (
         <>
-          <div className='blog-main-div sm:px-4 sm:py-8 py-2 px-2 overflow-hidden'>
-          <div className='border-2 border-gray-600 rounded-md pb-5 boxDivblog'>
-          <div className='headingblogdent flex justify-center items-center rounded-t-2xl '>
-            <h1 className="text-4xl text-center font-black bg-blue-700 text-transparent bg-clip-text flex flex-wrap  gblog-heading">LATEST POST</h1>
-          </div>
+        <div className='blog-main-div sm:px-4 sm:py-8 py-2 px-2 overflow-hidden'>
+        <div className='border-2 border-gray-600 rounded-md pb-5 boxDivblog'>
+        <div className='headingblogdent flex justify-center items-center rounded-t-2xl '>
+          <h1 className="text-4xl text-center font-black bg-blue-700 text-transparent bg-clip-text flex flex-wrap  gblog-heading">LATEST POST</h1>
+        </div>
         <div className ="blog-main rounded-b-2xl">
-        <div className="blog-info">
-        <h5 className='text-black min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center gblog-title'>{post.title}</h5>
-        <p className="px-10 py-10 text-center gblog-content">
+        <div className="blog-info md:mt-12 sm:w-[50%] w-[100%]">
+        <h5 className='text-black text-center min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center gblog-title'>{post.title}</h5>
+        <p className="md:px-10 md:px-7 px-2 py-10 text-center gblog-content text-justify w-[100%]">
           {post.post}
         </p>
-        <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gmore-event gblog-button">
+        <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gmore-event gblog-button">
             <a href={`https://${post.link}`} className='font-semibold text-white '>Link</a>
         </button>
-        <div className='flex sm:w-2/4 justify-evenly my-4 text-black'>
-        </div>
         </div>   
-        <div className="blog-image gblog-image">
+        <div className="blog-image gblog-image w-[50%]">
           <img src={post.imgUrl} alt="ok"/>
         </div> 
         </div>

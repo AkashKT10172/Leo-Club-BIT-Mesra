@@ -13,10 +13,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    /* width: 50%; */
     height : 100%;
     padding: 25px;
-    
 }
 .boxDivblog{
   
@@ -24,7 +23,7 @@
     border : none;
 }
 .blog-main .blog-image img {
-    margin-top: 50px;
+    margin-top: 25px;
     width : 425px;
     height: 500px;
     border-radius: 5px;

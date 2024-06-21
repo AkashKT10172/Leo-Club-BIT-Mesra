@@ -50,7 +50,11 @@ const BlogHome = () => {
                 {post.post}
               </p>
               <h5 className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>Author : {post.author.name}</h5>
-              <a href={`https://${post.link}`} className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>{post.link}</a>
+              <a href={`https://${post.link}`} className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>
+              <button 
+            className='mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+              Link
+            </button></a>
               {isAuth ? <div className='min-h-[10%] h-auto'>
                   <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
                     onClick={() => {deletePost(post.id)}}>Delete</button>

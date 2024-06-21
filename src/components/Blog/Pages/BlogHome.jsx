@@ -44,10 +44,10 @@ const BlogHome = () => {
         return (
           <div key={post.id} className='flex flex-col items-center p-4 bg-white h-auto '>
             <div className='border-2 flex lg:flex-row flex-col-reverse justify-center items-center mx-4 my-4 p-2 lg:w-2/4 w-full h-auto bg-[#fff9f2] shadow-md hover:shadow-lg hover:shadow-orange-100 transition-all rounded-md'>
-              <div className='lg:w-2/4 w-full h-auto lg:mr-4 p-2 rounded-lg'>
+              <div className='lg:w-2/4 w-full h-auto lg:mr-4 p-2 rounded-lg whitespace-pre-wrap'>
               <h5 className='font-nova text-blue-900 min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center'>{post.title}</h5>
-              <p className="md:min-h-72 text-justify font-nova text-blue-900">
-                {post.post}
+              <p className="md:min-h-72 text-justify font-nova text-blue-900 whitespace-pre-wrap">
+                {post.post.replaceAll(`\\n`, '\n')}
               </p>
               <h5 className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>Author : {post.author.name}</h5>
               <a href={`https://${post.link}`} className='min-h-[10%] h-auto flex items-end border-t-2 border-gray-500 font-nova text-blue-900'>

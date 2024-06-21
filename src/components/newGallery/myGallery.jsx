@@ -1,7 +1,5 @@
-import { signOut} from 'firebase/auth';
 import { auth, db } from '../../firebase-config';
-import { useSelector, useDispatch } from 'react-redux'
-import { deAuthorise } from '../auth/authSlice';
+import { useSelector } from 'react-redux'
 import React, { useState, useEffect } from 'react'
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy } from 'firebase/firestore';
@@ -9,15 +7,7 @@ import { query, orderBy } from 'firebase/firestore';
 
 const MyGallery = () => {
   const isAuth = useSelector((state) => state.auth.value);
-  const dispatch = useDispatch()
 
-  const signUserOut = () => {
-    signOut(auth).then(() => {
-      localStorage.clear();
-      dispatch(deAuthorise);
-      window.location.pathname = "/MyGallery";
-  })
-  }
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
   const imageCollectionRef = collection(db, 'images');
@@ -30,6 +20,7 @@ const MyGallery = () => {
     setImages(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
     setLoading(false)
   }
+
 
   const deletePost = async(id) => {
       const toDeletedoc = doc(db, 'images', id);
@@ -48,6 +39,10 @@ const MyGallery = () => {
     setSelectedImage(null);
     document.body.classList.remove('overflow-hidden'); 
   };
+
+  useEffect(() => {
+    getImages();
+  },[])
 
   if(loading) {
     return (

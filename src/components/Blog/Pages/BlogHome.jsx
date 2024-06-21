@@ -61,7 +61,7 @@ const BlogHome = () => {
               </div> : <></>}    
               </div>
               <div className='lg:w-2/4 w-full flex justify-end '>
-              <img src={post.imgUrl} className='lg:w-96 w-full h-96 object-cover border-2 border-gray-500' />
+              <img src={post.imgUrl} className='lg:w-96 w-full h-auto object-cover border-2 border-gray-500' />
               </div>
             </div>
           </div>

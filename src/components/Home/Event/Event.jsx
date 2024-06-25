@@ -42,7 +42,10 @@ function Event() {
   }, [loading]);
   if(loading) {
     return (
-    <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
+      <div className='h-full'>
+          <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
+      </div>
+   
     )
   }
   return (

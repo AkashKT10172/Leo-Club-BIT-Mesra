@@ -8,18 +8,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 function TeamDiv() {
   const profelement=[
-    { trigger: '.gprof-image', animation: { xPercent: -180, duration: 1 } },
+    { trigger: '.gprof-img', animation: { xPercent: -180, duration: 1 } },
     { trigger: '.gprof-heading', animation: { xPercent: 200, duration: 1 } },
     { trigger: '.gprof-content', animation: { scale: 0, duration: 1 } },
     { trigger: '.gprof-button', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
   ];
   useEffect(()=>{
+    console.log("inside");
     profelement.forEach((el) => {
       gsap.from(el.trigger, {
           ...el.animation,
            scrollTrigger: {
           trigger: el.trigger,
           start: "top 80%",
+          markers:"true",
            },
        });
    });
@@ -28,7 +30,7 @@ function TeamDiv() {
     <>
     <div className ="team-main overflow-hidden">
     <div className="team-image gprof-image">
-        <img src={profIn} alt="ok"/>
+        <img src={profIn} alt="ok" className='gprof-img'/>
     </div> 
     <div className="team-info">
         <h1 className="text-3xl text-gray-700 font-black text-center gprof-heading">PROFESSOR-IN-CHARGE</h1>

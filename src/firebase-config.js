@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDTcyOkzJZ9Rr_DS579pQNotEDmpS4ok5o",
-  authDomain: "leobitmesra-dc627.firebaseapp.com",
-  projectId: "leobitmesra-dc627",
-  storageBucket: "leobitmesra-dc627.appspot.com",
-  messagingSenderId: "108307406656",
-  appId: "1:108307406656:web:212ae0e6f8eac3e2a2a4a5"
+  apiKey: "AIzaSyBFhYwiNOZ8fxu9l8C85sZlPWJyJ3Gkojw",
+  authDomain: "leobitmesra-3c8ab.firebaseapp.com",
+  projectId: "leobitmesra-3c8ab",
+  storageBucket: "leobitmesra-3c8ab.appspot.com",
+  messagingSenderId: "420326222112",
+  appId: "1:420326222112:web:2d1d8ef6f91d048ba28f45"
 };
 
 const app = initializeApp(firebaseConfig);

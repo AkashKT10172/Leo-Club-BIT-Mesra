@@ -41,8 +41,10 @@ const MyEvents= () => {
   console.log(eventLists);
   return (
     <>
-    <div className='mt-[80px] '>
-    <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text p-1 text-center bheading">OUR EVENTS</h1>
+    <div className='h-auto flex flex-col overflow-x-hidden justify-center items-center my-16 mb-8 gap-3'>
+    <div className='flex h-25 justify-center items-center eheading'> 
+         <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text my-4 p-1 text-center">OUR EVENTS</h1>
+    </div>
     <div className='flex flex-wrap justify-evenly w-11/12 gap-4'>
     {eventLists.length === 0 ? <h3>No Events to show</h3> : eventLists.map((edesc,index) => {
         return <Card key={index} {...edesc} deleteEvent={deleteEvent} isAuth={isAuth}></Card>

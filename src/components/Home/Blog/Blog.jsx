@@ -5,7 +5,6 @@ import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy, limit } from 'firebase/firestore';
 import './blog.css'
 import gsap from 'gsap';
-
 const BlogHome = () => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -66,7 +65,7 @@ const BlogHome = () => {
         <p className="md:px-10 sm:px-7 px-2 py-10 gblog-content text-justify w-[100%] whitespace-pre-wrap">
           {post.post.replaceAll(`\\n`, '\n')}
         </p>
-        <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gmore-event gblog-button">
+        <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gblog-button">
             <a href={`https://${post.link}`} className='font-semibold text-white '>Link</a>
         </button>
         </div>   

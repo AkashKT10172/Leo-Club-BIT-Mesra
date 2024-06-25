@@ -10,21 +10,16 @@ import anjan from "/src/components/Team/imagesTeam/Anjan.jpg"
 import mohit from "/src/components/Team/imagesTeam/Mohit.jpg"
 import tanuja from "/src/components/Team/imagesTeam/Tanuja.jpg"
 import pranav from "/src/components/Team/imagesTeam/Pranav.jpg"
-import akshat from"/src/components/Team/imagesTeam/Akshat.jpg"
-import shubham from"/src/components/Team/imagesTeam/Shubham.jpg"
-import aakanksha from"/src/components/Team/imagesTeam/Aakanksha.jpg"
-import nishika from"/src/components/Team/imagesTeam/Nishika.jpg"
-
 
 
 export default {
     juniorMembers: [
-        {   image : akash,
+        {   image : rishav,
             name : "Rishav Kumar",
             designation : "General Secretary",
-            instagram : "akashdidwhat",
-            linkedin : "null",
-            mail : ""
+            instagram : "__rishavsingh12",
+            linkedin : "rishav-kumar-7089732b0",
+            mail : "rishavkumar3864@gmail.com"
         },
         {   image : khushi,
             name : "Khushi Sharma",

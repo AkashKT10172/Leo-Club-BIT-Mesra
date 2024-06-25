@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import './Event.css'
 import gsap from 'gsap';
 
-function Event() {
+function Event({setEventloaded}) {
 
   const [eventLists, setEventLists] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -19,6 +19,7 @@ function Event() {
     const data = await getDocs(q);
     setEventLists(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
     setLoading(false)
+    setEventloaded(true)
   }
   useEffect(() => {
     getEvents();
@@ -42,7 +43,10 @@ function Event() {
   }, [loading]);
   if(loading) {
     return (
-    <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
+      <div className='h-full'>
+          <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
+      </div>
+   
     )
   }
   return (

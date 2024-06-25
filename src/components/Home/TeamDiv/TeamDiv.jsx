@@ -6,7 +6,7 @@ import { handleClick } from '../../onClick'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-function TeamDiv() {
+function TeamDiv({eventloaded}) {
   const profelement=[
     { trigger: '.gprof-img', animation: { xPercent: -180, duration: 1 } },
     { trigger: '.gprof-heading', animation: { xPercent: 200, duration: 1 } },
@@ -21,11 +21,15 @@ function TeamDiv() {
            scrollTrigger: {
           trigger: el.trigger,
           start: "top 80%",
-          markers:"true",
            },
        });
    });
-  },[])
+  },[eventloaded])
+  if(!eventloaded){
+    return (
+      <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
+    )
+  }
   return (
     <>
     <div className ="team-main overflow-hidden">

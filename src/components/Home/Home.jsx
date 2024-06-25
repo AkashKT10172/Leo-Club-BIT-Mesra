@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Video from './Bg_video/Bg_video.jsx';
 import IntroDiv from './Intro/Intro.jsx';
 import Event from './Event/Event.jsx';
@@ -11,6 +11,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  const [eventloaded,setEventloaded]=useState(false);
   useEffect(() => {
     const introElements = [
       { trigger: '.glogo-image', animation: { xPercent: -180, duration: 1 } },
@@ -72,8 +73,8 @@ function Home() {
     <>
       <Video />
       <IntroDiv />
-      <Event />
-      <TeamDiv />
+      <Event setEventloaded={setEventloaded} />
+      <TeamDiv eventloaded={eventloaded} />
       <Blog />
       {/* <President /> */}
       <Contact />

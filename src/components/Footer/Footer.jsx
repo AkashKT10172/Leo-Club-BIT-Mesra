@@ -34,7 +34,7 @@ function Footer() {
             </div>
             <div className='sm:w-2/4 w-full flex flex-col justify-center items-center '>
               <NavLink to='/' className='py-2 underline hover:text-[#4889f2]' onClick={handleClick}>Home</NavLink>
-              <NavLink to='/events' className='py-2 underline hover:text-[#4889f2]' onClick={handleClick}>Events</NavLink>
+              <NavLink to='/myEvents' className='py-2 underline hover:text-[#4889f2]' onClick={handleClick}>Events</NavLink>
               <NavLink to='/blog' className='py-2 underline hover:text-[#4889f2]' onClick={handleClick}>Blog</NavLink>
               <NavLink to='/team' className='py-2 underline hover:text-[#4889f2]' onClick={handleClick}>Team</NavLink>
               <NavLink to='/about' className='py-2 underline hover:text-[#4889f2]' onClick={handleClick}>About Us</NavLink>

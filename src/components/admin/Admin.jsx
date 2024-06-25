@@ -34,6 +34,8 @@ const Admin = () => {
     onClick = {() => {window.scrollTo(0,0); navigate('/createblog')}}>Create a Post</button>
     <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2' 
     onClick = {() => {window.scrollTo(0,0); navigate('/uploadImage')}}>Upload an Image</button>
+    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2' 
+    onClick = {() => {window.scrollTo(0,0); navigate('/uploadEvents')}}>Upload an Event</button>
     <button className='bg-teal-500 hover:bg-teal-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2'
     onClick = {signUserOut}>Log-Out</button>
     </div>

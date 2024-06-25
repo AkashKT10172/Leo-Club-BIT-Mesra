@@ -48,7 +48,7 @@ function Navbar() {
       lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={`${handleNavClick}}`}>
           Home
       </NavLink>
-      <NavLink to="/events" className={({isActive}) => `block py-2 pr-2 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
+      <NavLink to="/myEvents" className={({isActive}) => `block py-2 pr-2 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-white"} 
       lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`} onClick={handleNavClick}>
           Events
       </NavLink>

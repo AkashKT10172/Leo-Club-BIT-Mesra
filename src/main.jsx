@@ -13,6 +13,8 @@ import CreateBlog from './components/Blog/Pages/CreateBlog.jsx'
 import UploadImage from './components/newGallery/uploadImage.jsx'
 import MyGallery from './components/newGallery/myGallery.jsx'
 import Admin from './components/admin/Admin.jsx'
+import UploadEvents from './components/newEvent/UploadEvents.jsx'
+import MyEvents from './components/newEvent/MyEvents.jsx'
 
 const Gallery = lazy(() => import('./components/Gallery/Gallery.jsx' ));
 
@@ -59,6 +61,14 @@ const router = createBrowserRouter(
           <Route path="myGallery" element={
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <MyGallery />
+          </Suspense>} />
+          <Route path="uploadEvents" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <UploadEvents />
+          </Suspense>} />
+          <Route path="myEvents" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <MyEvents/>
           </Suspense>} />
           <Route path="admin" element={
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>

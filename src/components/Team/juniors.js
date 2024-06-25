@@ -10,6 +10,11 @@ import anjan from "/src/components/Team/imagesTeam/Anjan.jpg"
 import mohit from "/src/components/Team/imagesTeam/Mohit.jpg"
 import tanuja from "/src/components/Team/imagesTeam/Tanuja.jpg"
 import pranav from "/src/components/Team/imagesTeam/Pranav.jpg"
+import akshat from"/src/components/Team/imagesTeam/Akshat.jpg"
+import shubham from"/src/components/Team/imagesTeam/Shubham.jpg"
+import aakanksha from"/src/components/Team/imagesTeam/Aakanksha.jpg"
+import nishika from"/src/components/Team/imagesTeam/Nishika.jpg"
+
 
 
 export default {
@@ -35,19 +40,19 @@ export default {
             linkedin : "adarsh-raj-70559725b",
             mail : "btech10816.22@bitmesra.ac.in"
         },
-        {  image : akash,
-            name : "Akash Kumar Tiwary",
+        {  image : akshat,
+            name : "Akshat Suman",
             designation : "Treasurer",
-            instagram : "akashdidwhat",
-            linkedin : "null",
-            mail : ""
+            instagram : "akshatsuman_",
+            linkedin : "akshatsuman",
+            mail : "btech10120.22@bitmesra.ac.in"
         },
-        {   image : akash,
-            name : "Akash Kumar Tiwary",
+        {   image : shubham,
+            name : "Shubham Kumar",
             designation : "Co-Treasurer",
-            instagram : "akashdidwhat",
-            linkedin : "null",
-            mail : ""
+            instagram : "Kumar_shubham16",
+            linkedin : "shubham-kumar-553632240",
+            mail : "shubhamk16080@gmail.com"
         },
         {   image : rajjoo,
             name : "Rajnish Tiwary",
@@ -76,6 +81,13 @@ export default {
             instagram : "pranav_raj_srivastav_03",
             linkedin : "pranav-raj-srivastav-891633240",
             mail : "rinshpranav12@gmail.com"
+        },
+        {   image : aakanksha,
+            name : "Aakanksha Pathak ",
+            designation : "Design Lead",
+            instagram : "aakanksha_2223",
+            linkedin : "pathak-786711290",
+            mail : "btech10884.22@bitmesra.ac.in"
         },
         {   image : akash_ori,
             name : "Akash Kumar Tiwary",
@@ -111,6 +123,13 @@ export default {
             instagram : "_shreyasingh04",
             linkedin : "shreya-singh-b34ba0297",
             mail : "shreyabokaro2004@gmail.com"
+        },
+        {   image :nishika,
+            name : "Nishika Bhatia ",
+            designation : "Executive member",
+            instagram : "nishikaabhatia",
+            linkedin : "nishika-bhatia-6601092a6/",
+            mail : "nishikaabhatia@gmail.com"
         }
     ]
 };

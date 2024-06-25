@@ -10,6 +10,11 @@ import anjan from "/src/components/Team/imagesTeam/Anjan.jpg"
 import mohit from "/src/components/Team/imagesTeam/Mohit.jpg"
 import tanuja from "/src/components/Team/imagesTeam/Tanuja.jpg"
 import pranav from "/src/components/Team/imagesTeam/Pranav.jpg"
+import akshat from"/src/components/Team/imagesTeam/Akshat.jpg"
+import shubham from"/src/components/Team/imagesTeam/Shubham.jpg"
+import aakanksha from"/src/components/Team/imagesTeam/Aakanksha.jpg"
+import nishika from "/src/components/Team/imagesTeam/Nishika.jpg"
+import rishav from "/src/components/Team/imagesTeam/Rishav.jpg"
 
 
 export default {

@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './TeamDiv.css'
 import profIn from "/src/components/Home/TeamDiv/amit_sir.jpeg"
 import { handleClick } from '../../onClick'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 function TeamDiv() {
+  const profelement=[
+    { trigger: '.gprof-image', animation: { xPercent: -180, duration: 1 } },
+    { trigger: '.gprof-heading', animation: { xPercent: 200, duration: 1 } },
+    { trigger: '.gprof-content', animation: { scale: 0, duration: 1 } },
+    { trigger: '.gprof-button', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
+  ];
+  useEffect(()=>{
+    profelement.forEach((el) => {
+      gsap.from(el.trigger, {
+          ...el.animation,
+           scrollTrigger: {
+          trigger: el.trigger,
+          start: "top 80%",
+           },
+       });
+   });
+  },[])
   return (
     <>
     <div className ="team-main overflow-hidden">

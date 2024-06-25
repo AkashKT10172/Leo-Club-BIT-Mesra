@@ -33,8 +33,6 @@ function Home() {
       { trigger: '.gprof-content', animation: { scale: 0, duration: 1 } },
       { trigger: '.gprof-button', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
     ];
-
-   
     // Function to create animations for elements
     const createAnimations = (elements, start) => {
       elements.forEach((el) => {
@@ -55,13 +53,13 @@ function Home() {
     mm.add("(min-width: 768px)", () => {
       createAnimations(introElements, "top 60%");
       // createAnimations(eventElements, "top 60%");
-      createAnimations(profelement,"top 60%");
+      // createAnimations(profelement,"top 60%");
     });
 
     mm.add("(max-width: 767px)", () => {
       createAnimations(introElements, "top 80%");
       // createAnimations(eventElements, "top 80%");
-      createAnimations(profelement,"top 80%");
+      // createAnimations(profelement,"top 80%");
     });
 
     return () => {

@@ -13,7 +13,7 @@ const Card = ({ name, date, type, description, imgUrl,id ,deleteEvent,isAuth}) =
       </div>
        
       <div className="mt-4 font-nova flex flex-col justify-center items-center text-blue-900 text-l">
-        <h2 className="text-3xl font-bold font-nova text-blue-900">{name}</h2>
+        <h2 className="text-[26px] font-bold font-nova text-blue-900">{name}</h2>
         <small>{date} | {type}</small>
         <p className='p-2'>{description1}
           <span

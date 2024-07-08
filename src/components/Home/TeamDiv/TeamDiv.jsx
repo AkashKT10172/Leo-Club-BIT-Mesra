@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 function TeamDiv({eventloaded}) {
   const profelement=[
-    { trigger: '.gprof-img', animation: { xPercent: -180, duration: 1 } },
+    { trigger: '.gprof-img', animation: { xPercent: -100, duration: 1 } },
     { trigger: '.gprof-heading', animation: { xPercent: 200, duration: 1 } },
     { trigger: '.gprof-content', animation: { scale: 0, duration: 1 } },
     { trigger: '.gprof-button', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
@@ -33,8 +33,8 @@ function TeamDiv({eventloaded}) {
   return (
     <>
     <div className ="team-main overflow-hidden">
-    <div className="team-image gprof-image">
-        <img src={profIn} alt="ok" className='gprof-img'/>
+    <div className="team-image gprof-img">
+        <img src={profIn} alt="ok" className=''/>
     </div> 
     <div className="team-info">
         <h1 className="text-3xl text-gray-700 font-black text-center gprof-heading">PROFESSOR-IN-CHARGE</h1>

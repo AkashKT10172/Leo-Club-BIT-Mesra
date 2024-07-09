@@ -17,7 +17,7 @@ function IntroDiv() {
             </div>
             <div className="info-div">
                 <h1 className="text-3xl text-gray-700 font-black text-center ginfo-head">LEO CLUB BIT MESRA</h1>
-                <p className="px-10 py-10 text-center ginfo-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <p className="md:px-10 sm:px-7 px-2 py-10 text-justify ginfo-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernatur
                 vero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,
                 dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optio

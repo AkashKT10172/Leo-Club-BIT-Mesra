@@ -61,7 +61,7 @@ function Event({setEventloaded}) {
           <div className ="event-main rounded-b-2xl">
           <div className="event-info  gevent-info">
               <h1 className="text-3xl text-gray-700 font-black text-center">{event.name}</h1>
-              <p className="px-10 py-10 text-center">{event.description}
+              <p className="md:px-10 sm:px-7 px-2 py-10 text-justify">{event.description}
               </p>
               <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gmore-event">
                   <NavLink to="/myEvents" onClick={()=>{

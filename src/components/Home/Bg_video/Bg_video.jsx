@@ -1,5 +1,5 @@
 import React from 'react';
-import videoBg from './Bg_video.mp4'
+import videoBg from './Bg_video_1.mp4'
 import './Bg_video.css'
 import { useRef } from 'react';
 

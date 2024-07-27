@@ -56,7 +56,7 @@ function Event({setEventloaded}) {
         return( <>
         <div className='border-2 border-gray-600 rounded-md pb-5 boxDivEvent'>
           <div className='headingEvent flex  justify-center items-center rounded-t-2xl gevent-heading'>
-            <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text ">UPCOMING EVENT</h1>
+            <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text ">OUR EVENT</h1>
           </div>
           <div className ="event-main rounded-b-2xl">
           <div className="event-info  gevent-info">

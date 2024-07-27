@@ -16,13 +16,13 @@ function IntroDiv() {
                 </h1>
             </div>
             <div className="info-div">
-                <h1 className="text-3xl text-gray-700 font-black text-center ginfo-head">LEO CLUB BIT MESRA</h1>
-                <p className="md:px-10 sm:px-7 px-2 py-10 text-justify ginfo-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus eligendi enim, cum minus reiciendis hic aliquid dolorem, qui repudiandae aspernatur
-                vero voluptas, facilis repellendus nesciunt commodi molestiae delectus quam possimus?Lorem ipsum,
-                dolor sit amet consectetur adipisicing elit. Explicabo nihil quisquam, dolores eos minima optio
-                delectus! Nobis error nihil harum, mollitia quo provident eligendi vitae commodi esse iste autem
-                quas.
+                <h1 className="sm:text-4xl text-3xl text-gray-700 font-black text-center ginfo-head">LEO CLUB BIT MESRA</h1>
+                <p className="md:px-10 sm:px-7 px-2 py-10 text-justify ginfo-content">
+                Leo Club BIT Mesra is a dedicated non-profit organization committed to promoting service activities among students.
+                Our mission is to nurture leadership, experience, and opportunity, fostering a spirit of friendship,
+                fellowship, and mutual understanding. We strive to make a positive impact in our community,
+                always working for a cause. Through collective efforts and selfless service, 
+                we inspire individuals to grow, lead with purpose, and make a meaningful difference in the world around us.
                 </p>
                
                 <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gknow-more">

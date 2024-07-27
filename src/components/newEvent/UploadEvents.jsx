@@ -63,38 +63,38 @@ const UploadEvents = () => {
     }
   })
   return (
-    <div className='bg-gray-800 h-screen mt-[60px]'>
+    <div className='bg-[azure] h-screen mt-[60px]'>
       <div className='flex flex-col items-center'>
-       <h1 className='font-bold text-2xl text-blue-300 my-4'>ADD AN EVENT</h1>
-       <div className='border-2 border-gray-500 p-2 bg-teal-200 md:w-2/4 w-[90%]'>
+       <h1 className='font-bold text-2xl text-blue-600 my-4'>ADD AN EVENT</h1>
+       <div className='border-2 border-black rounded-md p-2 bg-teal-200 md:w-2/4 w-[90%]'>
        <div className='sm:h-10 h-20 flex md:flex-row flex-col justify-between'>
           <input type="file" onChange={(e) => setImg(e.target.files[0])}/>
           <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick = {handleImageSubmit}>Upload</button>
         </div>
         <div className='w-full'>
           <label htmlFor="Name">Name</label>
-          <input className='w-full border-2 border-gray-500' type="text" placeholder='Name'  
+          <input className='w-full border-2 border-black rounded-sm px-2' type="text" placeholder='Name'  
           onChange={(e) => setName(e.target.value)}/>
         </div>
         <div className='w-full'>
           <label htmlFor="type">Type</label>
-          <input className='w-full border-2 border-gray-500' type="text" placeholder='type'  
+          <input className='w-full border-2 border-black rounded-sm px-2' type="text" placeholder='type'  
           onChange={(e) => setType(e.target.value)}/>
         </div>
         <div className='w-full'>
           <label htmlFor="Date">Date</label>
-          <input className='w-full border-2 border-gray-500' type="text" placeholder='yyyy-mm-dd'  
+          <input className='w-full border-2 border-black rounded-sm px-2' type="text" placeholder='yyyy-mm-dd'  
           onChange={(e) => setDate(e.target.value)}/>
         </div>
         <div className='h-64 w-full'>
           <label htmlFor="descrription">Description</label>
-          <textarea className='w-full h-[80%] border-2 border-gray-500' placeholder='Description...' 
+          <textarea className='w-full h-[80%] border-2 border-black rounded-sm px-2' placeholder='Description...' 
           name="" id="" 
           onChange={(e) => setDescription(e.target.value)}/>
         </div>
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={createEvent}>Publish</button>
         <button 
-            className='mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
+            className='mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2'
             onClick={() => navigate('/admin')}>
               Back to Admin Page
             </button>

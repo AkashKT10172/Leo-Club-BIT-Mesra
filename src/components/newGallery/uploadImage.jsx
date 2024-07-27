@@ -60,22 +60,22 @@ const UploadImage = () => {
     }
   })
   return (
-    <div className='bg-gray-800 h-screen mt-[60px]'>
+    <div className='bg-[azure] h-screen mt-[60px]'>
       <div className='flex flex-col items-center'>
-       <h1 className='font-bold text-2xl text-blue-300 my-4'>Upload Images</h1>
-       <div className='border-2 border-gray-500 p-2 bg-teal-200 md:w-2/4 w-[90%]'>
+       <h1 className='font-bold text-2xl text-blue-600 my-4'>Upload Images</h1>
+       <div className='border-2 border-black p-2 bg-teal-200 md:w-2/4 w-[90%]  rounded-md'>
         <div className='sm:h-10 h-20 flex md:flex-row flex-col justify-between'>
           <input type="file" multiple onChange={(e) => setImages(e.target.files)}/>
           <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick = {handleImageSubmit}>Upload</button>
         </div>
         <div className='w-full'>
           <label htmlFor="Date">Date & Time</label>
-          <input className='w-full border-2 border-gray-500' type="text" placeholder='yyyy-mm-dd _ time'  
+          <input className='w-full border-2 border-black px-2' type="text" placeholder='yyyy-mm-dd _ time'  
           onChange={(e) => setDate(e.target.value)}/>
         </div>
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={createPost}>Upload</button>
         <button 
-            className='mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
+            className='mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2'
             onClick={() => navigate('/admin')}>
               Back to Admin Page
             </button>

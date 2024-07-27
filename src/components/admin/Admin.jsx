@@ -28,15 +28,15 @@ const Admin = () => {
     <div className='my-[100px] flex flex-col items-center justify-center'>
         <h1 className='my-[20px] text-2xl text-center'>
             WELCOME ADMIN!
-            Just a Reminder 3 trophies is very much greater than any amount of centuries!
+            What Are you up to Today?
         </h1>
-    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2' 
+    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2 w-64' 
     onClick = {() => {window.scrollTo(0,0); navigate('/createblog')}}>Create a Post</button>
-    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2' 
+    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2 w-64' 
     onClick = {() => {window.scrollTo(0,0); navigate('/uploadImage')}}>Upload an Image</button>
-    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2' 
+    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2 w-64' 
     onClick = {() => {window.scrollTo(0,0); navigate('/uploadEvents')}}>Upload an Event</button>
-    <button className='bg-teal-500 hover:bg-teal-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2'
+    <button className='bg-teal-500 hover:bg-teal-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2 w-64'
     onClick = {signUserOut}>Log-Out</button>
     </div>
   )

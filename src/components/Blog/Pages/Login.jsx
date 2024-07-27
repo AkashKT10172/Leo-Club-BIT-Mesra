@@ -23,22 +23,22 @@ const Login = () => {
     })
   }
   return (
-     <div className='bg-gray-800 h-screen flex justify-center mt-[60px]'>
-      <div className='flex flex-col items-center sm:w-[400px] w-[300px]  mx-2 h-80 my-4 p-4 bg-teal-200 border-2 border-gray-500'>
-        <h1 className='text-red-500 underline'>ALL HAIL QUEEN RHANEYRA TARGARYEN</h1>
+     <div className='bg-azure h-screen flex justify-center mt-[60px]'>
+      <div className='flex flex-col items-center sm:w-[400px] w-[300px]  mx-2 h-80 my-4 p-4 rounded-md bg-teal-200 border-2 border-gray-500'>
+        <h1 className='text-blue-500 underline'>Please Enter e-Mail & Password</h1>
         <div className='w-full p-4'>
           <form className='flex flex-col items-start w-full' onSubmit={handleSubmit}>
             <label className='h-[25px]' htmlFor="email">Email</label>
             <input type="email"
             name='email'
             required 
-            className='h-[40px] w-full border-2 border-black'
+            className='h-[40px] w-full border-2 border-black px-2'
             onChange={(e) => setEmail(e.target.value)}/>
             <label className='h-[25px]' htmlFor="pass">Password</label>
             <input type="password"
             name='pass'
             required 
-            className='h-[40px] w-full border-2 border-black'
+            className='h-[40px] w-full border-2 border-black px-2'
             onChange={(e) => setPass(e.target.value)}/>
             <button 
             className='mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'

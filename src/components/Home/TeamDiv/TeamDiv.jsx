@@ -38,12 +38,11 @@ function TeamDiv({eventloaded}) {
     </div> 
     <div className="team-info">
         <h1 className="text-3xl text-gray-700 font-black text-center gprof-heading">PROFESSOR-IN-CHARGE</h1>
-        <pre className="md:px-10 sm:px-7 px-2 pt-10 pb-5 text-justify gprof-content">The word LEO stands for Leadership, Experience, Opportunity. The objective of the LEO Club is to provide the youth of the world an opportunity for development and contribution individually and collectively.
-        The LEO Club of BIT Mesra is a socio-cultural club governed by the Lions International Club. LEOs are known for their ferocious and passionate attitude. Their interests often revolve around bringing social changes in society. Leos love to showcase their talents and inspire others to channel their own bold actions.
-        So, be the change that you wish to see in the world.
-        Thanks and all the best,
-        <b>Dr. Amit Saran</b>
-        </pre>
+        <p className="md:px-10 sm:px-7 px-2 pt-10 pb-5 text-justify gprof-content">The word LEO stands for Leadership, Experience, Opportunity. The objective of the LEO Club is to provide the youth of the world an opportunity for development and contribution individually and collectively.
+          The LEO Club of BIT Mesra is a socio-cultural club governed by the Lions International Club. LEOs are known for their ferocious and passionate attitude. Their interests often revolve around bringing social changes in society. Leos love to showcase their talents and inspire others to channel their own bold actions.
+          So, be the change that you wish to see in the world.
+          Thanks and all the best
+        </p>
         <p className='font-bold text-center'>Dr. Amit Saran</p>
         <p className='font-bold pb-5 text-center'>Professor-In-chagre, Leo BIT Mesra</p>
         <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gprof-button">

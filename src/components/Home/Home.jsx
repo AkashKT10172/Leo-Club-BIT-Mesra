@@ -41,7 +41,7 @@ function Home() {
           ...el.animation,
           scrollTrigger: {
             trigger: el.trigger,
-            start:el.trigger === ".gmotto" || el.trigger === ".gmore-event" ? "top 90%" : start,
+            start:el.trigger === ".gmotto" || el.trigger === ".gmore-event" ? "top 95%" : start,
             toggleActions:"play none none none"
           },
         });

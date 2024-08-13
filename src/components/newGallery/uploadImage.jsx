@@ -9,7 +9,11 @@ const UploadImage = () => {
   const isAuth = useSelector((state) => state.auth.value);
 
   const[images, setImages] = useState('');
-  const[date, setDate] = useState('');
+  //const[date, setDate] = useState('');
+
+  const currDate = new Date().toISOString().split('T')[0];
+  const time = new Date().getHours() + '-' + new Date().getMinutes() + '-' + new Date().getSeconds()
+  const date = currDate + '-' + time
 
   const [imgUrl, setImgUrl] = useState([])
   let count = 0;
@@ -68,11 +72,11 @@ const UploadImage = () => {
           <input type="file" multiple onChange={(e) => setImages(e.target.files)}/>
           <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick = {handleImageSubmit}>Upload</button>
         </div>
-        <div className='w-full'>
+        {/* <div className='w-full'>
           <label htmlFor="Date">Date & Time</label>
           <input className='w-full border-2 border-black px-2' type="text" placeholder='yyyy-mm-dd _ time'  
           onChange={(e) => setDate(e.target.value)}/>
-        </div>
+        </div> */}
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={createPost}>Upload</button>
         <button 
             className='mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2'

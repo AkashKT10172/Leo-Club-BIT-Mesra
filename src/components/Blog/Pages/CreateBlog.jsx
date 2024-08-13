@@ -11,8 +11,12 @@ const CreateBlog = () => {
   const[title, setTitle] = useState('');
   const[post, setPost] = useState('');
   const[link, setLink] = useState('');
-  const[date, setDate] = useState('');
+  //const[date, setDate] = useState('');
 
+  const currDate = new Date().toISOString().split('T')[0];
+  const time = new Date().getHours() + '-' + new Date().getMinutes() + '-' + new Date().getSeconds()
+  const date = currDate + '-' + time
+  
   const [imgUrl, setImgUrl] = useState('')
   const [img, setImg] = useState('')
 
@@ -81,11 +85,11 @@ const CreateBlog = () => {
           <input className='w-full border-2 border-black rounded-sm px-2' type="text" placeholder='Link'  
           onChange={(e) => setLink(e.target.value)}/>
         </div>
-        <div className='w-full'>
+        {/* <div className='w-full'>
           <label htmlFor="Date">Date & Time</label>
           <input className='w-full border-2 border-black rounded-sm px-2' type="text" placeholder='yyyy-mm-dd _ time'  
           onChange={(e) => setDate(e.target.value)}/>
-        </div>
+        </div> */}
         <div className='h-64 w-full'>
           <label htmlFor="posts">Post</label>
           <textarea className='w-full h-[80%] border-2 border-black rounded-sm px-2' placeholder='Post...' 

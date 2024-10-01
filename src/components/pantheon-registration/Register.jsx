@@ -44,7 +44,7 @@ const Register = () => {
   return (
     <div className='bg-[azure] h-auto mt-[60px] pb-[30px] bg-gradient-to-b from-[#4889f2] via-[#4889f2]-500 to-black'>
       <div className='flex flex-col items-center'>
-       <h1 className='font-bold text-2xl text-[azure] my-4 underline'>Murder Mystery '24 Registration</h1>
+       <h1 className='font-bold text-2xl text-[azure] my-4 underline text-center'>Murder Mystery '24 Registration</h1>
        <div className='border-2 border-black rounded-md p-2 bg-gray-900 md:w-2/4 w-[90%]'>
           <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team Name'  
           onChange={(e) => setTeamName(e.target.value)}/>

@@ -46,27 +46,27 @@ const Register = () => {
       <div className='flex flex-col items-center'>
        <h1 className='font-bold text-2xl text-[azure] my-4 underline text-center'>Murder Mystery '24 Registration</h1>
        <div className='border-2 border-black rounded-md p-2 bg-gray-900 md:w-2/4 w-[90%]'>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team Name'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team Name'  
           onChange={(e) => setTeamName(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team ID'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team ID'  
           onChange={(e) => setTeamID(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team Leader Name'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team Leader Name'  
           onChange={(e) => setLeaderName(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="email" placeholder='Team Leader e-mail ID'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="email" placeholder='Team Leader e-mail ID'  
           onChange={(e) => setLeaderMail(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="number" placeholder='Team Leader Phone Number'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="number" placeholder='Team Leader Phone Number'  
           onChange={(e) => setLeaderPhone(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team Leader Branch'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='Team Leader Branch'  
           onChange={(e) => setLeaderBranch(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='2nd Member Name'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='2nd Member Name'  
           onChange={(e) => setMemTwo(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="email" placeholder='2nd Member e-Mail ID'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="email" placeholder='2nd Member e-Mail ID'  
           onChange={(e) => setMemTwoMail(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="number" placeholder='2nd Member Phone Number'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="number" placeholder='2nd Member Phone Number'  
           onChange={(e) => setMemTwoPhone(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='3rd Member'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='3rd Member'  
           onChange={(e) => setMemThree(e.target.value)}/>
-          <input className='border-b-2 border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='4th Member'  
+          <input className='border-b-2 text-[azure] border-slate-200 bg-transparent placeholder-gray-200 p-2 w-full focus:outline-none focus:border-blue-500 h-[30px] md:my-5 my-2' type="text" placeholder='4th Member'  
           onChange={(e) => setMemFour(e.target.value)}/>
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 w-full' onClick={createEvent}>Submit</button>
       </div>

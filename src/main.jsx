@@ -15,6 +15,7 @@ import MyGallery from './components/newGallery/myGallery.jsx'
 import Admin from './components/admin/Admin.jsx'
 import UploadEvents from './components/newEvent/UploadEvents.jsx'
 import MyEvents from './components/newEvent/MyEvents.jsx'
+import Register from './components/pantheon-registration/Register.jsx'
 
 const Gallery = lazy(() => import('./components/Gallery/Gallery.jsx' ));
 
@@ -73,6 +74,10 @@ const router = createBrowserRouter(
           <Route path="admin" element={
           <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
           <Admin />
+          </Suspense>} />
+          <Route path="mm-registration" element={
+          <Suspense fallback={<div className='min-h-screen flex justify-center items-center'>Please wait, we are Loading...</div>}>
+          <Register />
           </Suspense>} />
       </Route>
   )

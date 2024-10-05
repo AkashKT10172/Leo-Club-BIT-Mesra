@@ -25,7 +25,7 @@ const Admin = () => {
       })
     }
   return (
-    <div className='my-[100px] flex flex-col items-center justify-center'>
+    <div className='mt-[60px] flex flex-col items-center justify-center bg-gradient-to-b from-[#4889f2] via-[#4889f2]-500 to-black'>
         <h1 className='my-[20px] text-2xl text-center'>
             WELCOME ADMIN!
             What Are you up to Today?
@@ -36,6 +36,8 @@ const Admin = () => {
     onClick = {() => {window.scrollTo(0,0); navigate('/uploadImage')}}>Upload an Image</button>
     <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2 w-64' 
     onClick = {() => {window.scrollTo(0,0); navigate('/uploadEvents')}}>Upload an Event</button>
+    <button className='bg-blue-500 hover:bg-blue-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2 w-64' 
+    onClick = {() => {window.scrollTo(0,0); navigate('/mm-registrations-list')}}>MM - Registrations</button>
     <button className='bg-teal-500 hover:bg-teal-700 text-black-400 font-bold sm:py-2 px-4 rounded-sm my-2 w-64'
     onClick = {signUserOut}>Log-Out</button>
     </div>

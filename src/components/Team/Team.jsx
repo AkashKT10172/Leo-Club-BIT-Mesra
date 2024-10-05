@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useState} from 'react'
 import juniors from './juniors'
 import seniors from './seniors';
 import faculty from './faculty';
@@ -11,6 +11,32 @@ const myFacultyMem = faculty.facultyMembers;
 
 
 const Team = () => {
+  const [loading, setLoading] = useState(true);
+  setTimeout(() =>{
+    setLoading(false);
+  }, 1500)
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="loader"></div>
+        <style jsx>{`
+          .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    );
+  }
   return (
     <>
     <div className='mt-16 flex flex-col items-center justify-center'>

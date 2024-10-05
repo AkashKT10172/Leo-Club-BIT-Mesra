@@ -1,27 +1,35 @@
-import {React,useRef }from 'react'
+import {React, useState}from 'react'
 import {Typewriter} from 'react-simple-typewriter'
-import FramerAnimation from './FramerAnimation'
 import grpImg from '/src/components/AboutUs/batchphotok20.jpg'
-import {gsap} from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import {useGSAP} from '@gsap/react'
 import './AboutUs.css'
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
+
 const AboutUs = () => {
-  const motto=useRef();
-  useGSAP(()=>{
-    // gsap.from(motto.current,{
-    //   transform:'translateX(100%)',
-    //   duration:2,
-    //   scrollTrigger:{
-    //     trigger:motto.current,
-    //     scroller:"body",
-    //     start:"top 90%",
-    //   },
-    //   ease:"none"
-    // })  
-  })
+  const [loading, setLoading] = useState(true);
+  setTimeout(() =>{
+    setLoading(false);
+  }, 1500)
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="loader"></div>
+        <style jsx>{`
+          .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    );
+  }
   return (
     <div className='Acontainer overflow-x-hidden'>
      <div className='imgdiv flex h-auto relative max-h-[96vh] justify-center -m-1'>
@@ -52,8 +60,7 @@ const AboutUs = () => {
       </p>
     </div>
     <div className='w-full h-[150px] sm:h-[120px] bg-[#f9ede0] flex justify-center items-center font-serif text-blue-900 text-[32px] text-center tracking-wider'>
-      {/* <FramerAnimation></FramerAnimation> */}
-      <div ref={motto}  className='w-full place-content-center'>
+      <div className='w-full place-content-center'>
            WORKING FOR A CAUSE ALWAYS
       </div>
     </div>

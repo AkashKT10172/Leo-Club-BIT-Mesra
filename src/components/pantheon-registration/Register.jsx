@@ -7,7 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-  const isAuth = useSelector((state) => state.auth.value);
 
   const [teamName, setTeamName] = useState('');
   const [teamID, setTeamID] = useState('');
@@ -51,7 +50,31 @@ const Register = () => {
       }
     }
   };
+  const [loading, setLoading] = useState(true);
+  setTimeout(() =>{
+    setLoading(false);
+  }, 1500)
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="loader"></div>
+        <style jsx>{`
+          .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+          }
 
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    );}
   return (
     <div className='bg-[azure] h-auto mt-[60px] pb-[30px] bg-gradient-to-b from-[#4889f2] via-[#4889f2]-500 to-black'>
       <div className='flex flex-col items-center'>

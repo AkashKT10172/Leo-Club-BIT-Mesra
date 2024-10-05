@@ -19,7 +19,9 @@ const MyEvents= () => {
     const data = await getDocs(q);
     console.log(data);
     setEventLists(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
-    setLoading(false)
+    setTimeout(() =>{
+      setLoading(false);
+  }, 1500)
   }
   useEffect(() => {
     getEvents();
@@ -31,14 +33,28 @@ const MyEvents= () => {
       getEvents();
   }
 
-  if(loading) {
+  if (loading) {
     return (
-      <>
-        <h3 className='bg-white h-screen flex items-center justify-center text-white'>Loading....</h3>
-      </>
-    )
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="loader"></div>
+        <style jsx>{`
+          .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    );
   }
-  console.log(eventLists);
   return (
     <>
     <div className='h-auto flex flex-col overflow-x-hidden justify-center items-center my-16 mb-8 gap-3'>

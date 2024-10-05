@@ -64,9 +64,9 @@ const UploadImage = () => {
     }
   })
   return (
-    <div className='bg-[azure] h-screen mt-[60px]'>
+    <div className='h-screen mt-[60px] bg-gradient-to-b from-[#4889f2] via-[#4889f2]-500 to-black'>
       <div className='flex flex-col items-center'>
-       <h1 className='font-bold text-2xl text-blue-600 my-4'>Upload Images</h1>
+       <h1 className='font-bold text-2xl text-[azure] my-4'>Upload Images</h1>
        <div className='border-2 border-black p-2 bg-teal-200 md:w-2/4 w-[90%]  rounded-md'>
         <div className='sm:h-10 h-20 flex md:flex-row flex-col justify-between'>
           <input type="file" multiple onChange={(e) => setImages(e.target.files)}/>

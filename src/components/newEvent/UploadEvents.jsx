@@ -66,9 +66,9 @@ const UploadEvents = () => {
     }
   })
   return (
-    <div className='bg-[azure] h-screen mt-[60px]'>
+    <div className='bg-gradient-to-b from-[#4889f2] via-[#4889f2]-500 to-black h-screen mt-[60px]'>
       <div className='flex flex-col items-center'>
-       <h1 className='font-bold text-2xl text-blue-600 my-4'>ADD AN EVENT</h1>
+       <h1 className='font-bold text-2xl text-[azure] my-4'>ADD AN EVENT</h1>
        <div className='border-2 border-black rounded-md p-2 bg-teal-200 md:w-2/4 w-[90%]'>
        <div className='sm:h-10 h-20 flex md:flex-row flex-col justify-between'>
           <input type="file" onChange={(e) => setImg(e.target.files[0])}/>

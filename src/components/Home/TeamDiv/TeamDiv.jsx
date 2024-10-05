@@ -12,6 +12,7 @@ function TeamDiv({eventloaded}) {
     { trigger: '.gprof-heading', animation: { xPercent: 200, duration: 1 } },
     { trigger: '.gprof-content', animation: { scale: 0, duration: 1 } },
     { trigger: '.gprof-button', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
+    
   ];
   useEffect(()=>{
     console.log("inside");
@@ -33,12 +34,12 @@ function TeamDiv({eventloaded}) {
   return (
     <>
     <div className ="team-main overflow-hidden">
-    <div className="team-image gprof-img">
+    <div className="team-image">
         <img src={profIn} alt="ok" className=''/>
     </div> 
     <div className="team-info">
-        <h1 className="text-3xl text-gray-700 font-black text-center gprof-heading">PROFESSOR-IN-CHARGE</h1>
-        <p className="md:px-10 sm:px-7 px-2 pt-10 pb-5 text-justify gprof-content">The word LEO stands for Leadership, Experience, Opportunity. The objective of the LEO Club is to provide the youth of the world an opportunity for development and contribution individually and collectively.
+        <h1 className="text-3xl text-gray-700 font-black text-center">PROFESSOR-IN-CHARGE</h1>
+        <p className="md:px-10 sm:px-7 px-2 pt-10 pb-5 text-justify">The word LEO stands for Leadership, Experience, Opportunity. The objective of the LEO Club is to provide the youth of the world an opportunity for development and contribution individually and collectively.
           The LEO Club of BIT Mesra is a socio-cultural club governed by the Lions International Club. LEOs are known for their ferocious and passionate attitude. Their interests often revolve around bringing social changes in society. Leos love to showcase their talents and inspire others to channel their own bold actions.
           So, be the change that you wish to see in the world.
           Thanks and all the best

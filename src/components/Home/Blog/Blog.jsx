@@ -61,15 +61,15 @@ const BlogHome = () => {
         </div>
         <div className ="blog-main rounded-b-2xl">
         <div className="blog-info md:mt-12 sm:w-[50%] w-[100%]">
-        <h5 className='text-black text-center min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center gblog-title'>{post.title}</h5>
-        <p className="md:px-10 sm:px-7 px-2 py-10 gblog-content text-justify w-[100%] whitespace-pre-wrap">
+        <h5 className='text-black text-center min-h-[15%] h-auto text-3xl font-semibold border-b-2 border-gray-500 flex items-center'>{post.title}</h5>
+        <p className="md:px-10 sm:px-7 px-2 py-10 text-justify w-[100%] whitespace-pre-wrap">
           {post.post.replaceAll(`\\n`, '\n')}
         </p>
         <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gblog-button">
             <a href={`https://${post.link}`} className='font-semibold text-white '>Link</a>
         </button>
         </div>   
-        <div className="blog-image gblog-image w-[50%]">
+        <div className="blog-image w-[50%]">
           <img src={post.imgUrl} alt="ok"/>
         </div> 
         </div>

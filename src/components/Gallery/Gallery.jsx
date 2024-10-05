@@ -55,7 +55,7 @@ const Gallery = () => {
     setSelectedImage(null);
     document.body.classList.remove('overflow-hidden'); 
   };
-
+  
   return (
     <div className="h-full w-full flex flex-col justify-center items-center mb-6 mt-16">
       <h1 className="text-4xl font-black bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-transparent bg-clip-text my-4 p-1 text-center">

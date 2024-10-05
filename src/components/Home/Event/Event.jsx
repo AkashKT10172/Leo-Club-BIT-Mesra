@@ -28,7 +28,7 @@ function Event({setEventloaded}) {
       const blogelements = [
         { trigger: '.gevent-heading', animation: { scale: 0,opacity:0, duration: 1} },
         { trigger: '.gevent-img', animation: { x: 150, opacity: 0, duration: 1.5 } },
-        { trigger: '.gevent-info', animation: { y: 150, opacity: 0, duration: 1.5 } },
+        { trigger: '.gevent-info', animation: { y: 150, opacity: 0, duration: 0.5 } },
         { trigger: '.gmore-event', animation: { y: -100, opacity: 0, duration: 1, ease: 'bounce.out' } },
         ];
        blogelements.forEach((el) => {
@@ -59,7 +59,7 @@ function Event({setEventloaded}) {
             <h1 className="text-4xl font-black bg-blue-700 text-transparent bg-clip-text ">OUR EVENT</h1>
           </div>
           <div className ="event-main rounded-b-2xl">
-          <div className="event-info  gevent-info">
+          <div className="event-info">
               <h1 className="text-3xl text-gray-700 font-black text-center">{event.name}</h1>
               <p className="md:px-10 sm:px-7 px-2 py-10 text-justify">{event.description}
               </p>
@@ -69,7 +69,7 @@ function Event({setEventloaded}) {
                   }} >See all events! </NavLink>
               </button>
           </div>   
-          <div className="event-image gevent-img">
+          <div className="event-image">
               <img src={event.imgUrl} alt="ok"/>
           </div> 
           </div>

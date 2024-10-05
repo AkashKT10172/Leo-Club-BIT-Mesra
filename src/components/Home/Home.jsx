@@ -17,24 +17,10 @@ function Home() {
       { trigger: '.glogo-image', animation: { xPercent: -180, duration: 1 } },
       { trigger: '.gmotto', animation: { y: 20, opacity: 0, duration: 1.5 } },
       { trigger: '.ginfo-head', animation: { xPercent: 200, duration: 1 } },
-      { trigger: '.ginfo-content', animation: { scale: 0, duration: 1 } },
+      { trigger: '.ginfo-content', animation: { y: 150, opacity: 0, duration: 0.5 } }, 
       { trigger: '.gknow-more', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
     ];
 
-    // const eventElements = [
-    //   { trigger: '.gevent-heading', animation: { scale: 0,opacity:0, duration: 1,ease: ''} },
-    //   { trigger: '.gevent-img', animation: { x: 150, opacity: 0, duration: 1.5 } },
-    //   { trigger: '.gevent-info', animation: { y: 150, opacity: 0, duration: 1.5 } },
-    //   { trigger: '.gmore-event', animation: { y: -100, opacity: 0, duration: 1, ease: 'bounce.out' } },
-    // ];
-
-    const profelement=[
-      { trigger: '.gprof-image', animation: { xPercent: -180, duration: 1 } },
-      { trigger: '.gprof-heading', animation: { xPercent: 200, duration: 1 } },
-      { trigger: '.gprof-content', animation: { scale: 0, duration: 1 } },
-      { trigger: '.gprof-button', animation: { y: -50, opacity: 0, duration: 1, ease: 'bounce.out' } },
-    ];
-    // Function to create animations for elements
     const createAnimations = (elements, start) => {
       elements.forEach((el) => {
         gsap.from(el.trigger, {

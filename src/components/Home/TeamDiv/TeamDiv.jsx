@@ -45,7 +45,7 @@ function TeamDiv({eventloaded}) {
           Thanks and all the best
         </p>
         <p className='font-bold text-center'>Dr. Amit Saran</p>
-        <p className='font-bold pb-5 text-center'>Professor-In-chagre, Leo BIT Mesra</p>
+        <p className='font-bold pb-5 text-center'>Professor-In-Charge, Leo BIT Mesra</p>
         <button className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gprof-button">
             <NavLink to="/team" onClick={handleClick}>Our Team</NavLink>
         </button>

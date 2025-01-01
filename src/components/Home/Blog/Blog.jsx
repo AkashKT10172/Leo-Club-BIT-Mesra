@@ -5,6 +5,7 @@ import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore'
 import { query, orderBy, limit } from 'firebase/firestore';
 import './blog.css'
 import gsap from 'gsap';
+import { Link } from 'react-router-dom'; 
 const BlogHome = () => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -66,12 +67,18 @@ const BlogHome = () => {
           {post.post.replaceAll(`\\n`, '\n')}
         </p>
         <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded gblog-button">
-            <a href={`https://${post.link}`} className='font-semibold text-white '>Link</a>
+            <Link to="/blog" className='font-semibold text-white '>Link</Link>
         </button>
         </div>   
-        <div className="blog-image w-[50%]">
-          <img src={post.imgUrl} alt="ok"/>
-        </div> 
+        {post.imgUrl && (
+                    <div className="blog-image w-[50%]">
+                      <img
+                        src={post.imgUrl}
+                        alt="Post"
+                        className="object-cover rounded-md"
+                      />
+                    </div>
+                  )}
         </div>
         </div>
         </div>

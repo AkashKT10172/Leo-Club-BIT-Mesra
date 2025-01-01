@@ -19,7 +19,7 @@ const Video = () => {
     <div className='main'>
       <video src={videoBg} autoPlay loop muted/>
       <div className="content">
-        <button onClick = {{handleScrollToNextDiv} }
+        <button onClick = {handleScrollToNextDiv}
          className="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">GET STARTED</button>
       </div>
     </div>

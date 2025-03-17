@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { db } from "../../firebase-config"; // Ensure correct path
 import { collection, addDoc } from "firebase/firestore";
 import { useLocation } from "react-router-dom";
+import takeshi_img from "/src/components/RegistrationForm/takeshibg.jpg"
+import mismatched_img from "/src/components/RegistrationForm/mismatched-bg.jpg"
 
 const RegistrationForm = () => {
   const location = useLocation();
@@ -87,7 +89,7 @@ const RegistrationForm = () => {
       primaryColor: "yellow",
       secondaryColor: "black",
       accentColor: "yellow",
-      backgroundImage: "url('./src/components/RegistrationForm/takeshisbg.jpg')",
+      backgroundImage: takeshi_img,
       overlayColor: "rgba(0, 0, 0, 0.75)",
       logo: "TC",
       tagline: "Conquer the Castle!",
@@ -99,7 +101,7 @@ const RegistrationForm = () => {
       primaryColor: "pink",
       secondaryColor: "purple",
       accentColor: "purple",
-      backgroundImage: "url('./src/components/RegistrationForm/mismatched-bg.jpg')",
+      backgroundImage: mismatched_img,
       overlayColor: "rgba(25, 0, 50, 0.8)",
       logo: "MM",
       tagline: "Find Your Perfect Match!",

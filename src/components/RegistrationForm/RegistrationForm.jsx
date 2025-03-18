@@ -41,13 +41,98 @@ const RegistrationForm = () => {
   const [message, setMessage] = useState("");
   const [activeSection, setActiveSection] = useState("team");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // Clear error for this field when user starts typing
+    if (errors[e.target.name]) {
+      setErrors({
+        ...errors,
+        [e.target.name]: ""
+      });
+    }
+  };
+
+  // Function to validate team section
+  const validateTeamSection = () => {
+    const newErrors = {};
+    if (!formData.teamName.trim()) {
+      newErrors.teamName = "Team name is required";
+    }
+    if (!formData.teamID.trim()) {
+      newErrors.teamID = "Team ID is required";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Function to validate leader section
+  const validateLeaderSection = () => {
+    const newErrors = {};
+    if (!formData.leaderName.trim()) {
+      newErrors.leaderName = "Leader name is required";
+    }
+    if (!formData.leaderPhone.trim()) {
+      newErrors.leaderPhone = "Leader phone is required";
+    }
+    if (!formData.leaderEmail.trim()) {
+      newErrors.leaderEmail = "Leader email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.leaderEmail)) {
+      newErrors.leaderEmail = "Please enter a valid email";
+    }
+    if (!formData.leaderBranch.trim()) {
+      newErrors.leaderBranch = "Leader branch is required";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Function to handle navigation to next section
+  const handleNextSection = (currentSection, nextSection) => {
+    let isValid = false;
+    
+    if (currentSection === "team") {
+      isValid = validateTeamSection();
+    } else if (currentSection === "leader") {
+      isValid = validateLeaderSection();
+    }
+    
+    if (isValid) {
+      setActiveSection(nextSection);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Final validation before submission
+    let teamValid = validateTeamSection();
+    let leaderValid = validateLeaderSection();
+    
+    if (!teamValid) {
+      setActiveSection("team");
+      return;
+    }
+    
+    if (!leaderValid) {
+      setActiveSection("leader");
+      return;
+    }
+    
+    // Member 2 validation (assuming Member 2 is required)
+    const memberErrors = {};
+    if (!formData.member2Name.trim()) {
+      memberErrors.member2Name = "Member 2 name is required";
+    }
+    
+    if (Object.keys(memberErrors).length > 0) {
+      setErrors({...errors, ...memberErrors});
+      return;
+    }
+    
     setIsSubmitting(true);
 
     if (!eventCollection) {
@@ -72,6 +157,7 @@ const RegistrationForm = () => {
         member3Name: "",
         member4Name: "",
       }); // Reset form
+      setErrors({});
       
       // Clear message after 5 seconds
       setTimeout(() => {
@@ -84,13 +170,13 @@ const RegistrationForm = () => {
     setIsSubmitting(false);
   };
 
-  // Theme configurations - Fix the backgroundImage using proper import references
+  // Theme configurations
   const themes = {
     takeshi: {
       primaryColor: "yellow",
       secondaryColor: "black",
       accentColor: "yellow",
-      backgroundImage: `url(${takeshiBg})`, // Fixed: Use template literal with proper image import
+      backgroundImage: `url(${takeshiBg})`, 
       overlayColor: "rgba(0, 0, 0, 0.75)",
       logo: "TC",
       tagline: "Conquer the Castle!",
@@ -102,7 +188,7 @@ const RegistrationForm = () => {
       primaryColor: "pink",
       secondaryColor: "purple",
       accentColor: "purple",
-      backgroundImage:`url(${mismatchedBg})`, // Fixed: Use template literal with proper image import
+      backgroundImage:`url(${mismatchedBg})`,
       overlayColor: "rgba(25, 0, 50, 0.8)",
       logo: "MM",
       tagline: "Find Your Perfect Match!",
@@ -132,6 +218,7 @@ const RegistrationForm = () => {
         sectionTitle: "text-pink-400",
         cardBg: "bg-purple-900/30",
         cardBorder: "border-purple-800 hover:border-pink-500",
+        errorText: "text-red-300",
       };
     } else {
       return {
@@ -148,6 +235,7 @@ const RegistrationForm = () => {
         sectionTitle: "text-yellow-400",
         cardBg: "bg-gray-800/30",
         cardBorder: "border-gray-700 hover:border-yellow-500",
+        errorText: "text-red-300",
       };
     }
   };
@@ -195,20 +283,24 @@ const RegistrationForm = () => {
             >
               1
             </div>
-            {/* First connecting line - always visible */}
             <div className="flex-1 h-1 self-center mx-1 bg-gray-600"></div>
             <div 
-              onClick={() => setActiveSection("leader")}
+              onClick={() => validateTeamSection() && setActiveSection("leader")}
               className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
                 activeSection === "leader" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
               } transition-all duration-300`}
             >
               2
             </div>
-            {/* Second connecting line - always visible */}
             <div className="flex-1 h-1 self-center mx-1 bg-gray-600"></div>
             <div 
-              onClick={() => setActiveSection("members")}
+              onClick={() => {
+                if (validateTeamSection() && validateLeaderSection()) {
+                  setActiveSection("members");
+                } else if (validateTeamSection()) {
+                  setActiveSection("leader");
+                }
+              }}
               className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
                 activeSection === "members" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
               } transition-all duration-300`}
@@ -233,11 +325,12 @@ const RegistrationForm = () => {
                     value={formData.teamName}
                     onChange={handleChange}
                     required
-                    className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                    className={`w-full p-3 bg-gray-800/70 border ${errors.teamName ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                     focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                     transition-all duration-300`}
                     placeholder="Enter your team name"
                   />
+                  {errors.teamName && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.teamName}</p>}
                 </div>
                 
                 <div className="group">
@@ -248,17 +341,18 @@ const RegistrationForm = () => {
                     value={formData.teamID}
                     onChange={handleChange}
                     required
-                    className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                    className={`w-full p-3 bg-gray-800/70 border ${errors.teamID ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                     focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                     transition-all duration-300`}
                     placeholder="Enter your team ID"
                   />
+                  {errors.teamID && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.teamID}</p>}
                 </div>
                 
                 <div className="flex justify-end mt-6">
                   <button 
                     type="button" 
-                    onClick={() => setActiveSection("leader")}
+                    onClick={() => handleNextSection("team", "leader")}
                     className={`${themeClasses.buttonBg} ${themeClasses.buttonText} font-bold py-2 px-6 rounded-lg
                     transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50`}
                   >
@@ -282,11 +376,12 @@ const RegistrationForm = () => {
                       value={formData.leaderName}
                       onChange={handleChange}
                       required
-                      className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                      className={`w-full p-3 bg-gray-800/70 border ${errors.leaderName ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                       focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                       transition-all duration-300`}
                       placeholder="Enter leader's name"
                     />
+                    {errors.leaderName && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.leaderName}</p>}
                   </div>
                   
                   <div className="group">
@@ -297,11 +392,12 @@ const RegistrationForm = () => {
                       value={formData.leaderPhone}
                       onChange={handleChange}
                       required
-                      className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                      className={`w-full p-3 bg-gray-800/70 border ${errors.leaderPhone ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                       focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                       transition-all duration-300`}
                       placeholder="Enter phone number"
                     />
+                    {errors.leaderPhone && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.leaderPhone}</p>}
                   </div>
                 </div>
                 
@@ -314,11 +410,12 @@ const RegistrationForm = () => {
                       value={formData.leaderEmail}
                       onChange={handleChange}
                       required
-                      className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                      className={`w-full p-3 bg-gray-800/70 border ${errors.leaderEmail ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                       focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                       transition-all duration-300`}
                       placeholder="Enter email address"
                     />
+                    {errors.leaderEmail && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.leaderEmail}</p>}
                   </div>
                   
                   <div className="group">
@@ -329,11 +426,12 @@ const RegistrationForm = () => {
                       value={formData.leaderBranch}
                       onChange={handleChange}
                       required
-                      className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                      className={`w-full p-3 bg-gray-800/70 border ${errors.leaderBranch ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                       focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                       transition-all duration-300`}
                       placeholder="Enter branch"
                     />
+                    {errors.leaderBranch && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.leaderBranch}</p>}
                   </div>
                 </div>
                 
@@ -349,7 +447,7 @@ const RegistrationForm = () => {
                   
                   <button 
                     type="button" 
-                    onClick={() => setActiveSection("members")}
+                    onClick={() => handleNextSection("leader", "members")}
                     className={`${themeClasses.buttonBg} ${themeClasses.buttonText} font-bold py-2 px-6 rounded-lg
                     transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50`}
                   >
@@ -364,7 +462,7 @@ const RegistrationForm = () => {
               <h3 className={`text-xl font-bold ${themeClasses.sectionTitle} mb-4`}>Team Members</h3>
               
               {/* Member 2 */}
-              <div className={`mb-6 p-4 ${themeClasses.cardBg} rounded-lg border ${themeClasses.cardBorder} transition-all duration-300`}>
+              <div className={`mb-6 p-4 ${themeClasses.cardBg} rounded-lg border ${errors.member2Name ? "border-red-500" : themeClasses.cardBorder} transition-all duration-300`}>
                 <h4 className={`${themeClasses.highlightText} mb-3 border-b border-gray-700 pb-2`}>Member 2</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   <div className="group">
@@ -374,10 +472,12 @@ const RegistrationForm = () => {
                       placeholder="Full Name"
                       value={formData.member2Name}
                       onChange={handleChange}
-                      className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                      required
+                      className={`w-full p-3 bg-gray-800/70 border ${errors.member2Name ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                       focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                       transition-all duration-300`}
                     />
+                    {errors.member2Name && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.member2Name}</p>}
                   </div>
                   <div className="group">
                     <input
@@ -386,10 +486,11 @@ const RegistrationForm = () => {
                       placeholder="Email"
                       value={formData.member2Email}
                       onChange={handleChange}
-                      className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                      className={`w-full p-3 bg-gray-800/70 border ${errors.member2Email ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                       focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                       transition-all duration-300`}
                     />
+                    {errors.member2Email && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.member2Email}</p>}
                   </div>
                   <div className="group">
                     <input
@@ -398,10 +499,11 @@ const RegistrationForm = () => {
                       placeholder="Phone"
                       value={formData.member2Phone}
                       onChange={handleChange}
-                      className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                      className={`w-full p-3 bg-gray-800/70 border ${errors.member2Phone ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                       focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                       transition-all duration-300`}
                     />
+                    {errors.member2Phone && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.member2Phone}</p>}
                   </div>
                 </div>
               </div>
@@ -416,10 +518,11 @@ const RegistrationForm = () => {
                     placeholder="Full Name"
                     value={formData.member3Name}
                     onChange={handleChange}
-                    className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                    className={`w-full p-3 bg-gray-800/70 border ${errors.member3Name ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                     focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                     transition-all duration-300`}
                   />
+                  {errors.member3Name && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.member3Name}</p>}
                 </div>
               </div>
 
@@ -433,10 +536,11 @@ const RegistrationForm = () => {
                     placeholder="Full Name"
                     value={formData.member4Name}
                     onChange={handleChange}
-                    className={`w-full p-3 bg-gray-800/70 border ${themeClasses.inputBorder} rounded-lg text-white 
+                    className={`w-full p-3 bg-gray-800/70 border ${errors.member4Name ? "border-red-500" : themeClasses.inputBorder} rounded-lg text-white 
                     focus:outline-none focus:ring-2 ${themeClasses.inputFocus} focus:border-transparent
                     transition-all duration-300`}
                   />
+                  {errors.member4Name && <p className={`mt-1 text-sm ${themeClasses.errorText}`}>{errors.member4Name}</p>}
                 </div>
               </div>
 

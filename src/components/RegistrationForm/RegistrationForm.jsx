@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { db } from "../../firebase-config"; // Ensure correct path
+import React, { useState } from "react";
+import { db } from "../../firebase-config";
 import { collection, addDoc } from "firebase/firestore";
 import { useLocation } from "react-router-dom";
-import takeshi_img from "src/components/RegistrationForm/takeshisbg.jpg"
-import mismatched_img from "src/components/RegistrationForm/mismatched-bg.jpg"
+import takeshiBg from "./takeshisbg.jpg";
+import mismatchedBg from "./mismatched-bg.jpg";
+
 
 const RegistrationForm = () => {
   const location = useLocation();
@@ -83,13 +84,13 @@ const RegistrationForm = () => {
     setIsSubmitting(false);
   };
 
-  // Theme configurations
+  // Theme configurations - Fix the backgroundImage using proper import references
   const themes = {
     takeshi: {
       primaryColor: "yellow",
       secondaryColor: "black",
       accentColor: "yellow",
-      backgroundImage: takeshi_img,
+      backgroundImage: `url(${takeshiBg})`, // Fixed: Use template literal with proper image import
       overlayColor: "rgba(0, 0, 0, 0.75)",
       logo: "TC",
       tagline: "Conquer the Castle!",
@@ -101,7 +102,7 @@ const RegistrationForm = () => {
       primaryColor: "pink",
       secondaryColor: "purple",
       accentColor: "purple",
-      backgroundImage: mismatched_img,
+      backgroundImage:`url(${mismatchedBg})`, // Fixed: Use template literal with proper image import
       overlayColor: "rgba(25, 0, 50, 0.8)",
       logo: "MM",
       tagline: "Find Your Perfect Match!",
@@ -184,37 +185,37 @@ const RegistrationForm = () => {
             </div>
           )}
 
-    {/* Progress Indicator */}
-<div className="flex justify-between mb-8">
-  <div 
-    onClick={() => setActiveSection("team")}
-    className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
-      activeSection === "team" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
-    } transition-all duration-300`}
-  >
-    1
-  </div>
-  {/* First connecting line - always visible */}
-  <div className="flex-1 h-1 self-center mx-1 bg-gray-600"></div>
-  <div 
-    onClick={() => setActiveSection("leader")}
-    className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
-      activeSection === "leader" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
-    } transition-all duration-300`}
-  >
-    2
-  </div>
-  {/* Second connecting line - always visible */}
-  <div className="flex-1 h-1 self-center mx-1 bg-gray-600"></div>
-  <div 
-    onClick={() => setActiveSection("members")}
-    className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
-      activeSection === "members" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
-    } transition-all duration-300`}
-  >
-    3
-  </div>
-</div>
+          {/* Progress Indicator */}
+          <div className="flex justify-between mb-8">
+            <div 
+              onClick={() => setActiveSection("team")}
+              className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
+                activeSection === "team" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
+              } transition-all duration-300`}
+            >
+              1
+            </div>
+            {/* First connecting line - always visible */}
+            <div className="flex-1 h-1 self-center mx-1 bg-gray-600"></div>
+            <div 
+              onClick={() => setActiveSection("leader")}
+              className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
+                activeSection === "leader" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
+              } transition-all duration-300`}
+            >
+              2
+            </div>
+            {/* Second connecting line - always visible */}
+            <div className="flex-1 h-1 self-center mx-1 bg-gray-600"></div>
+            <div 
+              onClick={() => setActiveSection("members")}
+              className={`cursor-pointer rounded-full w-10 h-10 flex items-center justify-center border-2 ${
+                activeSection === "members" ? themeClasses.activeStep : "border-gray-500 text-gray-400 hover:text-gray-200"
+              } transition-all duration-300`}
+            >
+              3
+            </div>
+          </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Team Information Section */}
